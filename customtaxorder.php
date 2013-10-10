@@ -9,8 +9,7 @@ Author URI: http://timelord.nl/
 License: GPLv2 or later
 Text Domain: customtaxorder
 Domain Path: /lang/
-
- */
+*/
 
 /*
 This program is free software; you can redistribute it and/or
@@ -26,7 +25,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- */
+*/
 
 $customtaxorder_defaults = array('category' => 0);
 $args = array( 'public' => true, '_builtin' => false );
@@ -38,10 +37,12 @@ foreach ( $taxonomies as $taxonomy ) {
 $customtaxorder_defaults = apply_filters('customtaxorder_defaults', $customtaxorder_defaults);
 $customtaxorder_settings = get_option('customtaxorder_settings');
 $customtaxorder_settings = wp_parse_args($customtaxorder_settings, $customtaxorder_defaults);
-add_action('admin_init', 'customtaxorder_register_settings');
+
 function customtaxorder_register_settings() {
 	register_setting('customtaxorder_settings', 'customtaxorder_settings', 'customtaxorder_settings_validate');
 }
+add_action('admin_init', 'customtaxorder_register_settings');
+
 function customtaxorder_update_settings() {
 	global $customtaxorder_settings, $customtaxorder_defaults;
 	if ( isset($customtaxorder_settings['update']) ) {
@@ -275,6 +276,12 @@ function customtaxorder_sub_query( $terms, $tax ) {
 	endforeach;
 	return $options;
 }
+
+/*
+ * customtaxorder_apply_order_filter
+ * Function to sort the standard WordPress Queries.
+ */
+
 function customtaxorder_apply_order_filter($orderby, $args) {
 	global $customtaxorder_settings;
 	$options = $customtaxorder_settings;
@@ -293,10 +300,21 @@ function customtaxorder_apply_order_filter($orderby, $args) {
 }
 add_filter('get_terms_orderby', 'customtaxorder_apply_order_filter', 10, 2);
 
+/*
+ * customtaxorder_init
+ * Function called at initialisation.
+ * - Loads language files
+ */
+
 function customtaxorder_init() {
  	load_plugin_textdomain('customtaxorder', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
 }
 add_action('plugins_loaded', 'customtaxorder_init');
+
+/*
+ * customtaxorder_activate
+ * Function called at activation time.
+ */
 
 function customtaxorder_activate() {
 	global $wpdb;

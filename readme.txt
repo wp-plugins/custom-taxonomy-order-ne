@@ -12,10 +12,10 @@ Allows for the ordering of categories and custom taxonomy terms through a simple
 == Description ==
 
 Custom Taxonomy Order New Edition is a plugin for WordPress which allows for the ordering of taxonomies through a
-simple drag-and-drop interface using the available WordPress scripts and styles. The plugins are extremely
+simple drag-and-drop interface using the available WordPress scripts and styles. The plugin is extremely
 lightweight, without a bunch of unnecessary scripts to load into the admin. They also fall in line
 gracefully with the look and feel of the WordPress interface.
-The plugin uses it's own menu in the backend.
+This plugin uses it's own menu in the backend.
 
 It is a continuation (or fork) of Custom Taxonomy Order, which has been discontinued.
 
