@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: ordering, terms, custom taxonomies, term order
 Requires at least: 3.0
 Tested up to: 3.6.1
-Stable tag: trunk
+Stable tag: 2.1
 License: GPLv2 or later
 
 
