@@ -27,17 +27,6 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
-$customtaxorder_defaults = array('category' => 0);
-$args = array( 'public' => true, '_builtin' => false );
-$output = 'objects';
-$taxonomies = get_taxonomies( $args, $output );
-foreach ( $taxonomies as $taxonomy ) {
-	$customtaxorder_defaults[$taxonomy->name] = 0;
-}
-$customtaxorder_defaults = apply_filters('customtaxorder_defaults', $customtaxorder_defaults);
-$customtaxorder_settings = get_option('customtaxorder_settings');
-$customtaxorder_settings = wp_parse_args($customtaxorder_settings, $customtaxorder_defaults);
-
 function customtaxorder_register_settings() {
 	register_setting('customtaxorder_settings', 'customtaxorder_settings', 'customtaxorder_settings_validate');
 }
@@ -304,10 +293,25 @@ add_filter('get_terms_orderby', 'customtaxorder_apply_order_filter', 10, 2);
  * customtaxorder_init
  * Function called at initialisation.
  * - Loads language files
+ * - set defaults
+ * - get settings
  */
 
 function customtaxorder_init() {
+	global $customtaxorder_settings, $customtaxorder_defaults;
+
  	load_plugin_textdomain('customtaxorder', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
+
+ 	$customtaxorder_defaults = array('category' => 0);
+	$args = array( 'public' => true, '_builtin' => false );
+	$output = 'objects';
+	$taxonomies = get_taxonomies( $args, $output );
+	foreach ( $taxonomies as $taxonomy ) {
+		$customtaxorder_defaults[$taxonomy->name] = 0;
+	}
+	$customtaxorder_defaults = apply_filters('customtaxorder_defaults', $customtaxorder_defaults);
+	$customtaxorder_settings = get_option('customtaxorder_settings');
+	$customtaxorder_settings = wp_parse_args($customtaxorder_settings, $customtaxorder_defaults);
 }
 add_action('plugins_loaded', 'customtaxorder_init');
 
