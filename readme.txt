@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: mpol
-Tags: ordering, terms, custom taxonomies, term order
+Tags: ordering, sorting, terms, custom taxonomies, term order, categories
 Requires at least: 3.0
 Tested up to: 3.6.1
 Stable tag: 2.1
@@ -12,9 +12,9 @@ Allows for the ordering of categories and custom taxonomy terms through a simple
 == Description ==
 
 Custom Taxonomy Order New Edition is a plugin for WordPress which allows for the ordering of taxonomies through a
-simple drag-and-drop interface using the available WordPress scripts and styles. The plugin is extremely
-lightweight, without a bunch of unnecessary scripts to load into the admin. They also fall in line
-gracefully with the look and feel of the WordPress interface.
+simple drag-and-drop interface using the available WordPress scripts and styles. The plugin is lightweight,
+without any unnecessary scripts to load into the admin. It also falls in line gracefully with the look and feel
+of the WordPress interface.
 This plugin uses it's own menu in the backend.
 
 It is a continuation (or fork) of Custom Taxonomy Order, which has been discontinued.
@@ -45,6 +45,9 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.2 =
+* do init stuff in the init function
 
 = 2.1 =
 * renamed/forked as Custom Taxonomy Order New Edition
