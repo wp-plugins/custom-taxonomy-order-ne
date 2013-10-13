@@ -55,7 +55,7 @@ function customtaxorder_menu() {
 	$args = array( 'public' => true, '_builtin' => false );
 	$output = 'objects';
 	$taxonomies = get_taxonomies($args, $output);
-	add_menu_page(__('Term Order', 'customtaxorder'), __('Term Order', 'customtaxorder'), 'manage_categories', 'customtaxorder', 'customtaxorder', plugins_url('images/cat_order.png', __FILE__), 122);
+	add_menu_page(__('Term Order', 'customtaxorder'), __('Term Order', 'customtaxorder'), 'manage_categories', 'customtaxorder', 'customtaxorder', plugins_url('images/cat_order.png', __FILE__), 122.35);
 	add_submenu_page('customtaxorder', __('Order Categories', 'customtaxorder'), __('Order Categories', 'customtaxorder'), 'manage_categories', 'customtaxorder', 'customtaxorder');
 	foreach ($taxonomies as $taxonomy ) {
 		add_submenu_page('customtaxorder', __('Order ', 'customtaxorder') . $taxonomy->label, __('Order ', 'customtaxorder') . $taxonomy->label, 'manage_categories', 'customtaxorder-'.$taxonomy->name, 'customtaxorder');
