@@ -48,6 +48,8 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 = 2.2 =
 * do init stuff in the init function
+* also update term_order in term_relationships table
+* security update: validate input with $wpdb->prepare()
 
 = 2.1 =
 * renamed/forked as Custom Taxonomy Order New Edition

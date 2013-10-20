@@ -240,6 +240,12 @@ function customtaxorder() {
 </script>
 <?php }
 }
+
+/*
+ * customtaxorder_update_order
+ * Function to update the database with the submitted order
+ */
+
 function customtaxorder_update_order() {
 	if (isset($_POST['hidden-custom-order']) && $_POST['hidden-custom-order'] != "") {
 		global $wpdb;
@@ -247,14 +253,34 @@ function customtaxorder_update_order() {
 		$IDs = explode(",", $new_order);
 		$result = count($IDs);
 		for($i = 0; $i < $result; $i++) {
-			$str = str_replace("id_", "", $IDs[$i]);
-			$wpdb->query("UPDATE $wpdb->terms SET term_order = '$i' WHERE term_id ='$str'");
+			$id = (int) str_replace("id_", "", $IDs[$i]);
+			$wpdb->query( $wpdb->prepare(
+				"
+					UPDATE $wpdb->terms SET term_order = '%d' WHERE term_id ='%d'
+				",
+				$i,
+				$id
+			) );
+			$wpdb->query( $wpdb->prepare(
+				"
+					UPDATE $wpdb->term_relationships SET term_order = '%d' WHERE term_taxonomy_id ='%d'
+				",
+				$i,
+				$id
+			) );
+
 		}
 		echo '<div id="message" class="updated fade"><p>'. __('Order updated successfully.', 'customtaxorder').'</p></div>';
 	} else {
 		echo '<div id="message" class="error fade"><p>'. __('An error occured, order has not been saved.', 'customtaxorder').'</p></div>';
 	}
 }
+
+/*
+ * customtaxorder_sub_query
+ * Function to give an option for the list of sub-taxonomies
+ */
+
 function customtaxorder_sub_query( $terms, $tax ) {
 	$options = '';
 	foreach ( $terms as $term ) :
