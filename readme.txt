@@ -22,7 +22,7 @@ It is a continuation (or fork) of Custom Taxonomy Order, which has been disconti
 = Languages =
 
 * es_ES [Andrew Kurtis](http://webhostinghub.com)
-* nl_NL Marcel Pol
+* nl_NL [Marcel Pol](http://timelord.nl)
 
 == Installation ==
 
