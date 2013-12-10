@@ -2,7 +2,7 @@
 Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories
 Requires at least: 3.0
-Tested up to: 3.6.1
+Tested up to: 3.7.1
 Stable tag: 2.3
 License: GPLv2 or later
 
@@ -21,8 +21,8 @@ It is a continuation (or fork) of Custom Taxonomy Order, which has been disconti
 
 = Languages =
 
-es_ES [Andrew Kurtis](http://webhostinghub.com)
-nl_NL Marcel Pol
+* es_ES [Andrew Kurtis](http://webhostinghub.com)
+* nl_NL Marcel Pol
 
 == Installation ==
 
