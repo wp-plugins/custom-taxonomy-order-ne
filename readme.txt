@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories
 Requires at least: 3.0
 Tested up to: 3.6.1
-Stable tag: 2.2
+Stable tag: 2.3
 License: GPLv2 or later
 
 
@@ -18,6 +18,11 @@ of the WordPress interface.
 This plugin uses it's own menu in the backend.
 
 It is a continuation (or fork) of Custom Taxonomy Order, which has been discontinued.
+
+= Languages =
+
+es_ES [Andrew Kurtis](http://webhostinghub.com)
+nl_NL Marcel Pol
 
 == Installation ==
 
@@ -45,6 +50,9 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.3 =
+* Add es_ES translataion, thanks Andrew and Jelena
 
 = 2.2 =
 * do init stuff in the init function
