@@ -2,8 +2,8 @@
 Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories
 Requires at least: 3.0
-Tested up to: 3.7.1
-Stable tag: 2.3
+Tested up to: 3.8
+Stable tag: trunk
 License: GPLv2 or later
 
 
