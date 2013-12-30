@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://timelord.nl/wordpress/product/custom-taxonomy-order-ne?lang=en
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.3
+Version: 2.3.1
 Author: Marcel Pol
 Author URI: http://timelord.nl/
 License: GPLv2 or later
@@ -62,21 +62,25 @@ function customtaxorder_menu() {
 	}
 }
 function customtaxorder_css() {
-	$pos_page = $_GET['page'];
-	$pos_args = 'customtaxorder';
-	$pos = strpos($pos_page,$pos_args);
-	if ( $pos === false ) {} else {
-		wp_enqueue_style('customtaxorder', plugins_url('css/customtaxorder.css', __FILE__), 'screen');
+	if ( isset($_GET['page']) ) {
+		$pos_page = $_GET['page'];
+		$pos_args = 'customtaxorder';
+		$pos = strpos($pos_page,$pos_args);
+		if ( $pos === false ) {} else {
+			wp_enqueue_style('customtaxorder', plugins_url('css/customtaxorder.css', __FILE__), 'screen');
+		}
 	}
 }
 function customtaxorder_js_libs() {
-	$pos_page = $_GET['page'];
-	$pos_args = 'customtaxorder';
-	$pos = strpos($pos_page,$pos_args);
-	if ( $pos === false ) {} else {
-		wp_enqueue_script('jquery');
-		wp_enqueue_script('jquery-ui-core');
-		wp_enqueue_script('jquery-ui-sortable');
+	if ( isset($_GET['page']) ) {
+		$pos_page = $_GET['page'];
+		$pos_args = 'customtaxorder';
+		$pos = strpos($pos_page,$pos_args);
+		if ( $pos === false ) {} else {
+			wp_enqueue_script('jquery');
+			wp_enqueue_script('jquery-ui-core');
+			wp_enqueue_script('jquery-ui-sortable');
+		}
 	}
 }
 add_action('admin_menu', 'customtaxorder_menu');
