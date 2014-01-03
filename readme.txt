@@ -22,6 +22,7 @@ It is a continuation (or fork) of Custom Taxonomy Order, which has been disconti
 = Languages =
 
 * es_ES [Andrew Kurtis](http://webhostinghub.com)
+* it_IT Matteo Boria
 * nl_NL [Marcel Pol](http://timelord.nl)
 
 == Installation ==
@@ -50,6 +51,10 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.3.2 =
+* use print for translated substring (Matteo Boria)
+* Add Italian Translation (Matteo Boria)
 
 = 2.3.1 =
 * Fix PHP error-notice when activating

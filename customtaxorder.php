@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://timelord.nl/wordpress/product/custom-taxonomy-order-ne?lang=en
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.3.1
+Version: 2.3.2
 Author: Marcel Pol
 Author URI: http://timelord.nl/
 License: GPLv2 or later
@@ -190,7 +190,7 @@ function customtaxorder() {
 			</div>
 			<?php $dropdown = customtaxorder_sub_query( $terms, $tax ); if( !empty($dropdown) ) { ?>
 			<div class="widget order-widget">
-				<h3 class="widget-top"><?php _e('Sub-' . $tax_label, 'customtaxorder'); ?> | <small><?php _e('Choose a term from the drop down to order its sub-terms.', 'customtaxorder'); ?></small></h3>
+				<h3 class="widget-top"><?php print(__('Sub-', 'customtaxorder').$tax_label); ?> | <small><?php _e('Choose a term from the drop down to order its sub-terms.', 'customtaxorder'); ?></small></h3>
 				<div class="misc-pub-section misc-pub-section-last">
 					<select id="sub-posts" name="sub-posts">
 						<?php echo $dropdown; ?>
