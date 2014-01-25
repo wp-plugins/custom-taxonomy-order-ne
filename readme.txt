@@ -52,8 +52,11 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.3.3 =
+* Fix errors "undefined index" for undefined options
+
 = 2.3.2 =
-* use print for translated substring (Matteo Boria)
+* Use print for translated substring (Matteo Boria)
 * Add Italian Translation (Matteo Boria)
 
 = 2.3.1 =
