@@ -52,6 +52,9 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.3.5 =
+* Only filter categories when auto-sort is enabled
+
 = 2.3.4 =
 * Filter added for get_the_categories
 
