@@ -443,21 +443,4 @@ function customtaxorder_activate($networkwide) {
 }
 register_activation_hook(__FILE__, 'customtaxorder_activate');
 
-
-//Just for fun here:
-function customtaxorder_most_recently_used( $id ) {
-	global $wpdb;
-	$post_count = 0;
-	$post_type = get_post_type( $id );
-	$taxonomies = wp_get_object_taxonomies( $post_type );
-	$args = array('fields' => 'ids');
-	$terms = wp_get_object_terms( $id, $taxonomies, $args );
-	$thirtydaysago = date_i18n('U', strtotime('-30 days') );
-	foreach( $terms as $term ) :
-		$querystr = "SELECT count FROM $wpdb->term_taxonomy, $wpdb->posts, $wpdb->term_relationships WHERE $wpdb->posts.ID = $wpdb->term_relationships.object_id AND $wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id AND $wpdb->term_taxonomy.term_id = $term AND $wpdb->posts.post_status = 'publish' AND $wpdb->posts.post_date > $thirtydaysago";
-		$result = $wpdb->get_var($querystr);
-		$post_count = $result;
-		$wpdb->query("UPDATE $wpdb->terms SET term_order = '$post_count' WHERE term_id ='$term'");
-   endforeach;
-}
 ?>
