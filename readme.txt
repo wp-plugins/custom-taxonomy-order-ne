@@ -52,6 +52,9 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.3.8 =
+* Ouch, remove testing code
+
 = 2.3.7 =
 * Fix activation on network install (Matteo Boria)
 

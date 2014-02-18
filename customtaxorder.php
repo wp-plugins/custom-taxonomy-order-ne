@@ -374,7 +374,6 @@ add_filter( 'wp_get_object_terms', 'customtaxorder_wp_get_object_terms_order_fil
 
 function customtaxorder_order_categories($categories) {
 	global $customtaxorder_settings;
-var_dump($categories);
 	$options = $customtaxorder_settings;
 	if ( !isset ( $options['category'] ) ) {
 		$options['category'] = 0; // default if not set in options yet
@@ -386,7 +385,6 @@ var_dump($categories);
 	return $categories;
 }
 add_filter('get_the_categories', 'customtaxorder_order_categories',10,3);
-add_filter('get_terms', 'customtaxorder_order_categories',10,3);
 
 
 /*
