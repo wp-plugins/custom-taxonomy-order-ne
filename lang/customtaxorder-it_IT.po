@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Taxonomy Order NE -2.3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-09 21:49+0200\n"
+"PO-Revision-Date: 2014-01-03 11:16+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Matteo Boria <matteo@8-p.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: customtaxorder.php:68
+msgid "Term Order"
+msgstr "Ordina Categorie"
+
+#: customtaxorder.php:69
+msgid "Order Categories"
+msgstr "Ordina le Categorie"
+
+#: customtaxorder.php:71 customtaxorder.php:161
+msgid "Order "
+msgstr "Ordina "
+
+#: customtaxorder.php:125 customtaxorder.php:135
+msgid ""
+"Check this box if you want to enable Automatic Sorting of all instances from "
+"this taxonomy."
+msgstr ""
+"Spunta se vuoi attivare l'Ordinamento Automatico di tutte le voci in questa "
+"tassonomia"
+
+#: customtaxorder.php:176
+msgid ""
+"Order the taxonomies by dragging and dropping them into the desired order."
+msgstr ""
+"Ordina le tassonomie trascinandole (<em>drag&drop</em>) nell'ordine voluto"
+
+#: customtaxorder.php:186
+msgid "Return to Parent"
+msgstr "Torna al genitore "
+
+#: customtaxorder.php:190
+msgid "Update Order"
+msgstr "Aggiorna l'ordine"
+
+#: customtaxorder.php:199
+msgid "Sub-"
+msgstr "Sotto-"
+
+#: customtaxorder.php:199
+msgid "Choose a term from the drop down to order its sub-terms."
+msgstr "Seleziona un termine dalla tendina per ordinare i suoi sotto-termini."
+
+#: customtaxorder.php:204
+msgid "Order Sub-terms"
+msgstr "Ordina i Sotto-termini"
+
+#: customtaxorder.php:210
+msgid "No terms found"
+msgstr "Nessun termine trovato"
+
+#: customtaxorder.php:216
+msgid "Auto-Sort Queries"
+msgstr "Queries di auto-ordinamento"
+
+#: customtaxorder.php:222
+msgid "Save Settings"
+msgstr "Salva i settaggi"
+
+#: customtaxorder.php:263
+msgid "Order updated successfully."
+msgstr "Ordinamento aggiornato correttamente"
+
+#: customtaxorder.php:265
+msgid "An error occured, order has not been saved."
+msgstr "Si è verificato un errore, ordine non salvato."
