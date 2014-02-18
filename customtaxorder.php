@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://timelord.nl/wordpress/product/custom-taxonomy-order-ne?lang=en
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.3.6
+Version: 2.3.7
 Author: Marcel Pol
 Author URI: http://timelord.nl/
 License: GPLv2 or later
@@ -374,6 +374,7 @@ add_filter( 'wp_get_object_terms', 'customtaxorder_wp_get_object_terms_order_fil
 
 function customtaxorder_order_categories($categories) {
 	global $customtaxorder_settings;
+var_dump($categories);
 	$options = $customtaxorder_settings;
 	if ( !isset ( $options['category'] ) ) {
 		$options['category'] = 0; // default if not set in options yet
@@ -385,6 +386,7 @@ function customtaxorder_order_categories($categories) {
 	return $categories;
 }
 add_filter('get_the_categories', 'customtaxorder_order_categories',10,3);
+add_filter('get_terms', 'customtaxorder_order_categories',10,3);
 
 
 /*
@@ -418,12 +420,29 @@ add_action('plugins_loaded', 'customtaxorder_init');
  * Function called at activation time.
  */
 
-function customtaxorder_activate() {
+function _customtaxorder_activate() {
 	global $wpdb;
 	$init_query = $wpdb->query("SHOW COLUMNS FROM $wpdb->terms LIKE 'term_order'");
-	if ($init_query == 0) {	$wpdb->query("ALTER TABLE $wpdb->terms ADD `term_order` INT( 4 ) NULL DEFAULT '0'"); }
+	if ($init_query == 0) {	$wpdb->query("ALTER TABLE $wpdb->terms ADD <code>term_order</code> INT( 4 ) NULL DEFAULT '0'"); }
+}
+function customtaxorder_activate($networkwide) {
+	global $wpdb;
+	if (function_exists('is_multisite') && is_multisite()) {
+		if ($networkwide) {
+			$curr_blog = $wpdb->blogid;
+			$blogids = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
+			foreach ($blogids as $blog_id) {
+				switch_to_blog($blog_id);
+				_customtaxorder_activate();
+			}
+			switch_to_blog($curr_blog);
+		}
+	} else {
+		_customtaxorder_activate();
+	}
 }
 register_activation_hook(__FILE__, 'customtaxorder_activate');
+
 
 //Just for fun here:
 function customtaxorder_most_recently_used( $id ) {
