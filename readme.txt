@@ -52,6 +52,9 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.3.9 =
+* Fix activation code to really generate term_order column
+
 = 2.3.8 =
 * Ouch, remove testing code
 
