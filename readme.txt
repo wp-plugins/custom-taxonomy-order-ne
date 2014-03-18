@@ -24,6 +24,7 @@ It is a continuation (or fork) of Custom Taxonomy Order, which has been disconti
 * es_ES [Andrew Kurtis](http://webhostinghub.com)
 * it_IT Matteo Boria
 * nl_NL [Marcel Pol](http://timelord.nl)
+* pl_PL [Paweł Data](webidea.pl)
 
 == Installation ==
 
@@ -51,6 +52,10 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.4.0 =
+* Add Polish translation (Paweł Data)
+* Sort Alphabetically (landwire)
 
 = 2.3.9 =
 * Fix activation code to really generate term_order column

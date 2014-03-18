@@ -3,15 +3,15 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://timelord.nl/wordpress/product/custom-taxonomy-order-ne?lang=en
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.3.9
+Version: 2.4.0
 Author: Marcel Pol
 Author URI: http://timelord.nl/
 License: GPLv2 or later
 Text Domain: customtaxorder
 Domain Path: /lang/
-*/
 
-/*
+Copyright 2013-2014		Marcel Pol		(email: marcel@timelord.nl)
+
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
 as published by the Free Software Foundation; either version 2
@@ -201,6 +201,7 @@ function customtaxorder() {
 						<div id="publishing-action">
 							<img src="<?php echo esc_url( admin_url( 'images/wpspin_light.gif' ) ); ?>" id="custom-loading" style="display:none" alt="" />
 							<input type="submit" name="order-submit" id="order-submit" class="button-primary" value="<?php _e('Update Order', 'customtaxorder') ?>" />
+							<input type="submit" name="order-alpha" id="order-alpha" class="button-primary" value="<?php _e('Sort Alphabetical', 'customtaxorder') ?>" />
 						</div>
 						<div class="clear"></div>
 						</div>
@@ -239,12 +240,24 @@ function customtaxorder() {
 <?php if ( $terms ) { ?>
 <script type="text/javascript">
 // <![CDATA[
+
 	jQuery(document).ready(function(jQuery) {
 		jQuery("#custom-loading").hide();
 		jQuery("#order-submit").click(function() {
 			orderSubmit();
 		});
+		jQuery("#order-alpha").click(function(e) {
+			e.preventDefault();
+			jQuery("#custom-loading").show();
+			orderAlpha();
+			//jQuery("#order-submit").trigger("click");
+			setTimeout(function(){
+				jQuery("#custom-loading").hide();
+			},500);
+			jQuery("#order-alpha").blur();
+		});
 	});
+
 	function customtaxorderAddLoadEvent(){
 		jQuery("#custom-order-list").sortable({
 			placeholder: "sortable-placeholder",
@@ -252,13 +265,31 @@ function customtaxorder() {
 			tolerance: "pointer"
 		});
 	};
+
 	addLoadEvent(customtaxorderAddLoadEvent);
+
 	function orderSubmit() {
 		var newOrder = jQuery("#custom-order-list").sortable("toArray");
 		jQuery("#custom-loading").show();
 		jQuery("#hidden-custom-order").val(newOrder);
 		return true;
 	}
+
+	function orderAlpha() {
+		jQuery("#custom-order-list li").sort(asc_sort).appendTo('#custom-order-list');
+		var newOrder = jQuery("#custom-order-list").sortable("toArray");
+		jQuery("#custom-loading").show();
+		jQuery("#hidden-custom-order").val(newOrder);
+		return true;
+	}
+
+	// accending sort
+	function asc_sort(a, b) {
+		//return (jQuery(b).text()) < (jQuery(a).text()) ? 1 : -1;
+		//console.log (jQuery(a).text());
+		return jQuery(a).text().toUpperCase().localeCompare(jQuery(b).text().toUpperCase());
+	}
+
 // ]]>
 </script>
 <?php }

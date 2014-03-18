@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-09 21:49+0200\n"
+"POT-Creation-Date: 2014-03-18 12:02+0100\n"
 "PO-Revision-Date: 2013-12-10 15:22+0100\n"
 "Last-Translator: Marcel Pol <marcel@timelord.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: customtaxorder.php:68
+#: customtaxorder.php:58
 msgid "Term Order"
 msgstr "Orden del Término"
 
-#: customtaxorder.php:69
+#: customtaxorder.php:59
 msgid "Order Categories"
 msgstr "Categorías del Orden"
 
-#: customtaxorder.php:71 customtaxorder.php:161
+#: customtaxorder.php:61 customtaxorder.php:174
 msgid "Order "
 msgstr "Orden "
 
-#: customtaxorder.php:125 customtaxorder.php:135
+#: customtaxorder.php:127 customtaxorder.php:141
 msgid ""
 "Check this box if you want to enable Automatic Sorting of all instances from "
 "this taxonomy."
@@ -37,49 +37,53 @@ msgstr ""
 "Seleccione esta casilla si desea habilitar el Ordenamiento Automático para "
 "todas las instancias de esta taxonomía."
 
-#: customtaxorder.php:176
+#: customtaxorder.php:189
 msgid ""
 "Order the taxonomies by dragging and dropping them into the desired order."
 msgstr ""
 "Ordene las taxonomías arrastrándolas y soltándolas en el orden deseado."
 
-#: customtaxorder.php:186
+#: customtaxorder.php:199
 msgid "Return to Parent"
 msgstr "Volver al Padre"
 
-#: customtaxorder.php:190
+#: customtaxorder.php:203
 msgid "Update Order"
 msgstr "Orden de Actualización"
 
-#: customtaxorder.php:199
+#: customtaxorder.php:204
+msgid "Sort Alphabetical"
+msgstr ""
+
+#: customtaxorder.php:213
 msgid "Sub-"
 msgstr "Sub-"
 
-#: customtaxorder.php:199
+#: customtaxorder.php:213
 msgid "Choose a term from the drop down to order its sub-terms."
 msgstr ""
 "Escoja un término desde el menú desplegable para ordenar sus sub términos."
 
-#: customtaxorder.php:204
+#: customtaxorder.php:218
 msgid "Order Sub-terms"
 msgstr "Ordenar Sub términos"
 
-#: customtaxorder.php:210
+#: customtaxorder.php:224
 msgid "No terms found"
 msgstr "No se encontraron términos"
 
-#: customtaxorder.php:216
+#: customtaxorder.php:230
 msgid "Auto-Sort Queries"
 msgstr "Consultas de auto ordenamiento"
 
-#: customtaxorder.php:222
+#: customtaxorder.php:236
 msgid "Save Settings"
 msgstr "Salvar Ajustes"
 
-#: customtaxorder.php:263
+#: customtaxorder.php:327
 msgid "Order updated successfully."
 msgstr "Ordenamiento actualizado satisfactoriamente."
 
-#: customtaxorder.php:265
+#: customtaxorder.php:329
 msgid "An error occured, order has not been saved."
 msgstr "Un error ocurrió, el orden no ha sido salvado."
