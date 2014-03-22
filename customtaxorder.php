@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://timelord.nl/wordpress/product/custom-taxonomy-order-ne?lang=en
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.4.0
+Version: 2.4.1
 Author: Marcel Pol
 Author URI: http://timelord.nl/
 License: GPLv2 or later
@@ -41,12 +41,20 @@ function customtaxorder_update_settings() {
 	}
 }
 function customtaxorder_settings_validate($input) {
-	$input['category'] = ($input['category'] == 1 ? 1 : 0);
+	if ( $input['category'] != 1 ) {
+		if ( $input['category'] != 2 ) {
+			$input['category'] = 0; // default
+		}
+	}
 	$args = array( 'public' => true, '_builtin' => false );
 	$output = 'objects';
 	$taxonomies = get_taxonomies( $args, $output );
 	foreach ( $taxonomies as $taxonomy ) {
-		$input[$taxonomy->name] = ($input[$taxonomy->name] == 1 ? 1 : 0);
+		if ( $input[$taxonomy->name] != 1 ) {
+			if ( $input[$taxonomy->name] != 2 ) {
+				$input[$taxonomy->name] = 0; //default
+			}
+		}
 	}
 	return $input;
 }
@@ -124,7 +132,9 @@ function customtaxorder() {
 		if ( !isset($options['category']) ) {
 			$options['category'] = 0; // default if not set in options yet
 		}
-		$settings .= '<input name="customtaxorder_settings[category]" type="checkbox" value="1" ' . checked('1', $options['category'], false) . ' /> <label for="customtaxorder_settings[category]">' . __('Check this box if you want to enable Automatic Sorting of all instances from this taxonomy.', 'customtaxorder') . '</label>';
+		$settings .= '<input type="radio" name="customtaxorder_settings[category]" value="0" ' . checked('0', $options['category'], false) . ' /> <label for="customtaxorder_settings[category]">' . __('Order by ID (default).', 'customtaxorder') . '</label><br />';
+		$settings .= '<input type="radio" name="customtaxorder_settings[category]" value="1" ' . checked('1', $options['category'], false) . ' /> <label for="customtaxorder_settings[category]">' . __('Custom Order as defined above.', 'customtaxorder') . '</label><br />';
+		$settings .= '<input type="radio" name="customtaxorder_settings[category]" value="2" ' . checked('2', $options['category'], false) . ' /> <label for="customtaxorder_settings[category]">' . __('Alphabetical Order.', 'customtaxorder') . '</label><br />';
 		$tax_label = 'Categories';
 		$tax = 'category';
 	} else {
@@ -138,7 +148,9 @@ function customtaxorder() {
 					$options[$taxonomy->name] = 0; // default if not set in options yet
 				}
 				if ( $_GET['page'] == $com_page ) {
-					$settings .= '<input name="customtaxorder_settings[' . $taxonomy->name . ']" type="checkbox" value="1" ' . checked('1', $options[$taxonomy->name], false) . ' /> <label for="customtaxorder_settings[' . $taxonomy->name . ']">' . __('Check this box if you want to enable Automatic Sorting of all instances from this taxonomy.', 'customtaxorder') . '</label>';
+					$settings .= '<input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="0" ' . checked('0', $options[$taxonomy->name], false) . ' /> <label for="customtaxorder_settings[' . $taxonomy->name . ']">' . __('Order by ID (default).', 'customtaxorder') . '</label><br />';
+					$settings .= '<input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="1" ' . checked('1', $options[$taxonomy->name], false) . ' /> <label for="customtaxorder_settings[' . $taxonomy->name . ']">' . __('Custom Order as defined above.', 'customtaxorder') . '</label><br />';
+					$settings .= '<input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="2" ' . checked('2', $options[$taxonomy->name], false) . ' /> <label for="customtaxorder_settings[' . $taxonomy->name . ']">' . __('Alphabetical Order.', 'customtaxorder') . '</label><br />';
 					$tax_label = $taxonomy->label;
 					$tax = $taxonomy->name;
 				} else {
@@ -227,7 +239,7 @@ function customtaxorder() {
 	<form method="post" action="options.php">
 		<?php settings_fields('customtaxorder_settings'); ?>
 		<table class="form-table">
-			<tr valign="top"><th scope="row"><?php _e('Auto-Sort Queries', 'customtaxorder') ?></th>
+			<tr valign="top"><th scope="row"><?php _e('Auto-Sort Queries of this Taxonomy', 'customtaxorder') ?></th>
 				<td><?php echo $settings; ?></td>
 			</tr>
 		</table>
@@ -364,8 +376,12 @@ function customtaxorder_apply_order_filter($orderby, $args) {
 	}
 	if ( $args['orderby'] == 'term_order' ) {
 		return 't.term_order';
+	} elseif ( $args['orderby'] == 'name' ) {
+		return 't.name';
 	} elseif ( $options[$taxonomy] == 1 && !isset($_GET['orderby']) ) {
 		return 't.term_order';
+	} elseif ( $options[$taxonomy] == 2 && !isset($_GET['orderby']) ) {
+		return 't.name';
 	} else {
 		return $orderby;
 	}
@@ -376,6 +392,8 @@ add_filter('get_terms_orderby', 'customtaxorder_apply_order_filter', 10, 2);
 /*
  * customtaxorder_wp_get_object_terms_order_filter
  * Function to sort in wp_get_object_terms and wp_get_post_terms functions.
+ * Default sorting is by name (according to the codex).
+ *
  */
 
 function customtaxorder_wp_get_object_terms_order_filter( $terms ) {

@@ -30,7 +30,7 @@ It is a continuation (or fork) of Custom Taxonomy Order, which has been disconti
 
 1. Upload the plugin folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Order posts from the Term Order menu in the admin
+3. Order posts from the 'Term Order' menu in the admin
 4. Optionally set whether or not to have queries of the selected taxonomy be sorted by this order automatically.
 5. Optionally set `'orderby' => 'term_order', 'order => 'ASC'` to manually sort queries by this order.
 6. Enjoy!
@@ -52,6 +52,10 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.4.1 =
+* Add alphabetical sorting to options as well
+* Update Polish and Dutch
 
 = 2.4.0 =
 * Add Polish translation (Paweł Data)

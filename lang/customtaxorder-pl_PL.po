@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Taxonomy Order NE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-18 12:02+0100\n"
-"PO-Revision-Date: 2014-02-07 08:56+0100\n"
+"POT-Creation-Date: 2014-03-22 12:39+0100\n"
+"PO-Revision-Date: 2014-03-21 09:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: Webidea.pl <paweldata@webidea.pl>\n"
 "Language: pl_PL\n"
@@ -20,71 +20,85 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: customtaxorder.php:58
+#: customtaxorder.php:66
 msgid "Term Order"
 msgstr "Kolejność terminów"
 
-#: customtaxorder.php:59
+#: customtaxorder.php:67
 msgid "Order Categories"
 msgstr "Sortuj kategorie"
 
-#: customtaxorder.php:61 customtaxorder.php:174
+#: customtaxorder.php:69 customtaxorder.php:186
 msgid "Order "
 msgstr "Sortuj "
 
-#: customtaxorder.php:127 customtaxorder.php:141
-msgid ""
-"Check this box if you want to enable Automatic Sorting of all instances from "
-"this taxonomy."
+#: customtaxorder.php:135 customtaxorder.php:151
+msgid "Order by ID (default)."
 msgstr ""
-"Zaznacz to pole jeśli chcesz aby ta kolejność była wymuszona dla wszystkich "
-"instacji tej taksonomii"
 
-#: customtaxorder.php:189
+#: customtaxorder.php:136 customtaxorder.php:152
+msgid "Custom Order as defined above."
+msgstr ""
+
+#: customtaxorder.php:137 customtaxorder.php:153
+msgid "Alphabetical Order."
+msgstr ""
+
+#: customtaxorder.php:201
 msgid ""
 "Order the taxonomies by dragging and dropping them into the desired order."
 msgstr "Sortuj terminy za pomocą metody przeciągnij i upuść."
 
-#: customtaxorder.php:199
+#: customtaxorder.php:211
 msgid "Return to Parent"
 msgstr "Powróć do rodzica"
 
-#: customtaxorder.php:203
+#: customtaxorder.php:215
 msgid "Update Order"
 msgstr "Zapisz kolejność"
 
-#: customtaxorder.php:204
+#: customtaxorder.php:216
 msgid "Sort Alphabetical"
-msgstr ""
+msgstr "Sortuj alfabetycznie"
 
-#: customtaxorder.php:213
+#: customtaxorder.php:225
 msgid "Sub-"
 msgstr "Pod-"
 
-#: customtaxorder.php:213
+#: customtaxorder.php:225
 msgid "Choose a term from the drop down to order its sub-terms."
 msgstr "Wybierz termin z listy rozwijanej aby sortować terminy podrzędne"
 
-#: customtaxorder.php:218
+#: customtaxorder.php:230
 msgid "Order Sub-terms"
 msgstr "Sortuj terminy podrzędne"
 
-#: customtaxorder.php:224
+#: customtaxorder.php:236
 msgid "No terms found"
 msgstr "Nie znaleziono żadnego terminu"
 
-#: customtaxorder.php:230
-msgid "Auto-Sort Queries"
-msgstr "Zapytania auto-sortowania"
+#: customtaxorder.php:242
+msgid "Auto-Sort Queries of this Taxonomy"
+msgstr ""
 
-#: customtaxorder.php:236
+#: customtaxorder.php:248
 msgid "Save Settings"
 msgstr "Zapisz ustawienia"
 
-#: customtaxorder.php:327
+#: customtaxorder.php:339
 msgid "Order updated successfully."
 msgstr "Kolejność zapisana."
 
-#: customtaxorder.php:329
+#: customtaxorder.php:341
 msgid "An error occured, order has not been saved."
 msgstr "Wystąpił błąd podczas zapisywania kolejności."
+
+#~ msgid ""
+#~ "Check this box if you want to enable Automatic Sorting of all instances "
+#~ "from this taxonomy."
+#~ msgstr ""
+#~ "Zaznacz to pole jeśli chcesz aby ta kolejność była wymuszona dla "
+#~ "wszystkich instacji tej taksonomii"
+
+#~ msgid "Auto-Sort Queries"
+#~ msgstr "Zapytania auto-sortowania"

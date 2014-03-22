@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-18 12:02+0100\n"
+"POT-Creation-Date: 2014-03-22 12:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,69 +17,75 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: customtaxorder.php:58
+#: customtaxorder.php:66
 msgid "Term Order"
 msgstr ""
 
-#: customtaxorder.php:59
+#: customtaxorder.php:67
 msgid "Order Categories"
 msgstr ""
 
-#: customtaxorder.php:61 customtaxorder.php:174
+#: customtaxorder.php:69 customtaxorder.php:186
 msgid "Order "
 msgstr ""
 
-#: customtaxorder.php:127 customtaxorder.php:141
-msgid ""
-"Check this box if you want to enable Automatic Sorting of all instances from "
-"this taxonomy."
+#: customtaxorder.php:135 customtaxorder.php:151
+msgid "Order by ID (default)."
 msgstr ""
 
-#: customtaxorder.php:189
+#: customtaxorder.php:136 customtaxorder.php:152
+msgid "Custom Order as defined above."
+msgstr ""
+
+#: customtaxorder.php:137 customtaxorder.php:153
+msgid "Alphabetical Order."
+msgstr ""
+
+#: customtaxorder.php:201
 msgid ""
 "Order the taxonomies by dragging and dropping them into the desired order."
 msgstr ""
 
-#: customtaxorder.php:199
+#: customtaxorder.php:211
 msgid "Return to Parent"
 msgstr ""
 
-#: customtaxorder.php:203
+#: customtaxorder.php:215
 msgid "Update Order"
 msgstr ""
 
-#: customtaxorder.php:204
+#: customtaxorder.php:216
 msgid "Sort Alphabetical"
 msgstr ""
 
-#: customtaxorder.php:213
+#: customtaxorder.php:225
 msgid "Sub-"
 msgstr ""
 
-#: customtaxorder.php:213
+#: customtaxorder.php:225
 msgid "Choose a term from the drop down to order its sub-terms."
 msgstr ""
 
-#: customtaxorder.php:218
+#: customtaxorder.php:230
 msgid "Order Sub-terms"
 msgstr ""
 
-#: customtaxorder.php:224
+#: customtaxorder.php:236
 msgid "No terms found"
 msgstr ""
 
-#: customtaxorder.php:230
-msgid "Auto-Sort Queries"
+#: customtaxorder.php:242
+msgid "Auto-Sort Queries of this Taxonomy"
 msgstr ""
 
-#: customtaxorder.php:236
+#: customtaxorder.php:248
 msgid "Save Settings"
 msgstr ""
 
-#: customtaxorder.php:327
+#: customtaxorder.php:339
 msgid "Order updated successfully."
 msgstr ""
 
-#: customtaxorder.php:329
+#: customtaxorder.php:341
 msgid "An error occured, order has not been saved."
 msgstr ""
