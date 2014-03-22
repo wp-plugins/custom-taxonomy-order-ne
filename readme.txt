@@ -53,6 +53,9 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.4.2 =
+* New dashicon
+
 = 2.4.1 =
 * Add alphabetical sorting to options as well
 * Update Polish and Dutch
