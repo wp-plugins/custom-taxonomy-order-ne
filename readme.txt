@@ -53,6 +53,9 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.4.3 =
+* Add settings link
+
 = 2.4.2 =
 * New dashicon
 

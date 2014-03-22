@@ -435,6 +435,20 @@ function customtaxorder_order_categories($categories) {
 }
 add_filter('get_the_categories', 'customtaxorder_order_categories',10,3);
 
+/*
+ * customtaxorder_links
+ * Add Settings link to the main plugin page
+ *
+ */
+
+function customtaxorder_links( $links, $file ) {
+        if ( $file == plugin_basename( dirname(__FILE__).'/customtaxorder.php' ) ) {
+                $links[] = '<a href="' . admin_url( 'admin.php?page=customtaxorder' ) . '">'.__( 'Settings' ).'</a>';
+        }
+        return $links;
+}
+add_filter( 'plugin_action_links', 'customtaxorder_links', 10, 2 );
+
 
 /*
  * customtaxorder_init
