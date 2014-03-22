@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-22 12:39+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: customtaxorder.php:66
+msgid "Term Order"
+msgstr ""
+
+#: customtaxorder.php:67
+msgid "Order Categories"
+msgstr ""
+
+#: customtaxorder.php:69 customtaxorder.php:186
+msgid "Order "
+msgstr ""
+
+#: customtaxorder.php:135 customtaxorder.php:151
+msgid "Order by ID (default)."
+msgstr ""
+
+#: customtaxorder.php:136 customtaxorder.php:152
+msgid "Custom Order as defined above."
+msgstr ""
+
+#: customtaxorder.php:137 customtaxorder.php:153
+msgid "Alphabetical Order."
+msgstr ""
+
+#: customtaxorder.php:201
+msgid ""
+"Order the taxonomies by dragging and dropping them into the desired order."
+msgstr ""
+
+#: customtaxorder.php:211
+msgid "Return to Parent"
+msgstr ""
+
+#: customtaxorder.php:215
+msgid "Update Order"
+msgstr ""
+
+#: customtaxorder.php:216
+msgid "Sort Alphabetical"
+msgstr ""
+
+#: customtaxorder.php:225
+msgid "Sub-"
+msgstr ""
+
+#: customtaxorder.php:225
+msgid "Choose a term from the drop down to order its sub-terms."
+msgstr ""
+
+#: customtaxorder.php:230
+msgid "Order Sub-terms"
+msgstr ""
+
+#: customtaxorder.php:236
+msgid "No terms found"
+msgstr ""
+
+#: customtaxorder.php:242
+msgid "Auto-Sort Queries of this Taxonomy"
+msgstr ""
+
+#: customtaxorder.php:248
+msgid "Save Settings"
+msgstr ""
+
+#: customtaxorder.php:339
+msgid "Order updated successfully."
+msgstr ""
+
+#: customtaxorder.php:341
+msgid "An error occured, order has not been saved."
+msgstr ""
