@@ -4,10 +4,21 @@ Plugin URI: http://timelord.nl/
 */
 
 .order-widget {
-	float: left;
 	width: 512px;
+}
+#poststuff .order-widget {
+	float: left;
 	margin: 0 20px 20px 0;
 }
+#sub-posts,
+#go-sub-posts {
+	margin-top: 13px;
+}
+
+.order-widget th {
+	padding-left: 12px;
+}
+
 ul#custom-order-list {
 	list-style: none;
 }

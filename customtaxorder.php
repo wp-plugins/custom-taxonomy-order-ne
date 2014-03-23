@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://timelord.nl/wordpress/product/custom-taxonomy-order-ne?lang=en
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.4.4
+Version: 2.4.5
 Author: Marcel Pol
 Author URI: http://timelord.nl/
 License: GPLv2 or later
@@ -216,7 +216,7 @@ function customtaxorder() {
 							<input type="submit" name="order-alpha" id="order-alpha" class="button-primary" value="<?php _e('Sort Alphabetical', 'customtaxorder') ?>" />
 						</div>
 						<div class="clear"></div>
-						</div>
+					</div>
 					<input type="hidden" id="hidden-custom-order" name="hidden-custom-order" />
 					<input type="hidden" id="hidden-parent-id" name="hidden-parent-id" value="<?php echo $parent_ID; ?>" />
 				</div>
@@ -236,17 +236,25 @@ function customtaxorder() {
 			<p><?php _e('No terms found', 'customtaxorder'); ?></p>
 		<?php } ?>
 	</form>
-	<form method="post" action="options.php">
+	<form method="post" action="options.php" class="clear">
 		<?php settings_fields('customtaxorder_settings'); ?>
-		<table class="form-table">
-			<tr valign="top"><th scope="row"><?php _e('Auto-Sort Queries of this Taxonomy', 'customtaxorder') ?></th>
-				<td><?php echo $settings; ?></td>
-			</tr>
-		</table>
-		<input type="hidden" name="customtaxorder_settings[update]" value="Updated" />
-		<p class="submit">
-			<input type="submit" class="button-primary" value="<?php _e('Save Settings', 'customtaxorder') ?>" />
-		</p>
+		<div class="metabox-holder">
+			<div class="order-widget">
+				<h3 class="widget-top"><?php _e('Settings'); ?></h3>
+				<table class="form-table">
+					<tr valign="top">
+						<th scope="row"><?php _e('Auto-Sort Queries of this Taxonomy', 'customtaxorder') ?></th>
+					</tr>
+					<tr valign="top">
+						<td><?php echo $settings; ?></td>
+					</tr>
+				</table>
+				<input type="hidden" name="customtaxorder_settings[update]" value="Updated" />
+				<p class="submit">
+					<input type="submit" class="button-primary" value="<?php _e('Save Settings', 'customtaxorder') ?>" />
+				</p>
+			</div>
+		</div>
 	</form>
 </div>
 <?php if ( $terms ) { ?>
