@@ -53,6 +53,9 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.4.6 +
+* Update pl_PL
+
 = 2.4.5 =
 * Improve html/css
 
