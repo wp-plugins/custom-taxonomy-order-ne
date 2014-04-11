@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://timelord.nl/wordpress/product/custom-taxonomy-order-ne?lang=en
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.4.7
+Version: 2.4.8
 Author: Marcel Pol
 Author URI: http://timelord.nl/
 License: GPLv2 or later
@@ -411,7 +411,7 @@ function customtaxorder_wp_get_object_terms_order_filter( $terms ) {
 	if ( isset( $terms[0]->taxonomy ) ) {
 		$taxonomy = $terms[0]->taxonomy;
 	} else {
-		$taxonomy = 'category';
+		return $terms; // not an array with objects
 	}
 	if ( !isset ( $options[$taxonomy] ) ) {
 		$options[$taxonomy] = 0; // default if not set in options yet

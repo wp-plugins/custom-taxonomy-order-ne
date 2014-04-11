@@ -53,6 +53,9 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.4.8 =
+* Don't usort on an array which doesn't contain objects
+
 = 2.4.7 =
 * Also filter at the get_terms hook for get_terms() and wp_list_categories()
 
