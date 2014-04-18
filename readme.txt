@@ -23,7 +23,7 @@ It is a continuation (or fork) of Custom Taxonomy Order, which has been disconti
 
 * es_ES [Andrew Kurtis](http://webhostinghub.com)
 * it_IT Matteo Boria
-* nl_NL [Marcel Pol](http://timelord.nl)
+* nl_NL [Marcel Pol](http://zenoweb.nl)
 * pl_PL [Paweł Data](webidea.pl)
 
 == Installation ==
@@ -43,7 +43,7 @@ If you update from the original Custom Taxonomy Order please deactivate that fir
 
 = No questions have been asked yet. =
 
-Email any questions to marcel at timelord dot nl
+Email any questions to marcel at zenoweb dot nl
 
 == Screenshots ==
 
