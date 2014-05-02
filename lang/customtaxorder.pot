@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-22 12:39+0100\n"
+"POT-Creation-Date: 2014-05-02 14:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,10 @@ msgstr ""
 
 #: customtaxorder.php:137 customtaxorder.php:153
 msgid "Alphabetical Order."
+msgstr ""
+
+#: customtaxorder.php:138
+msgid "Categories"
 msgstr ""
 
 #: customtaxorder.php:201
@@ -74,18 +78,22 @@ msgstr ""
 msgid "No terms found"
 msgstr ""
 
-#: customtaxorder.php:242
+#: customtaxorder.php:243 customtaxorder.php:458
+msgid "Settings"
+msgstr ""
+
+#: customtaxorder.php:246
 msgid "Auto-Sort Queries of this Taxonomy"
 msgstr ""
 
-#: customtaxorder.php:248
+#: customtaxorder.php:254
 msgid "Save Settings"
 msgstr ""
 
-#: customtaxorder.php:339
+#: customtaxorder.php:347
 msgid "Order updated successfully."
 msgstr ""
 
-#: customtaxorder.php:341
+#: customtaxorder.php:349
 msgid "An error occured, order has not been saved."
 msgstr ""

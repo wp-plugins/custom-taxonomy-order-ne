@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-22 12:39+0100\n"
-"PO-Revision-Date: 2014-03-22 12:41+0100\n"
+"POT-Creation-Date: 2014-05-02 14:07+0200\n"
+"PO-Revision-Date: 2014-05-02 14:08+0100\n"
 "Last-Translator: Marcel Pol <marcel@timelord.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nl_NL\n"
@@ -40,6 +40,10 @@ msgstr "Aangepaste Volgorde zoals boven aangegeven."
 #: customtaxorder.php:137 customtaxorder.php:153
 msgid "Alphabetical Order."
 msgstr "Alfabetische Volgorde."
+
+#: customtaxorder.php:138
+msgid "Categories"
+msgstr "Categorieën"
 
 #: customtaxorder.php:201
 msgid ""
@@ -74,19 +78,23 @@ msgstr "Sorteer Sub-terms"
 msgid "No terms found"
 msgstr "Geen terms gevonden"
 
-#: customtaxorder.php:242
+#: customtaxorder.php:243 customtaxorder.php:458
+msgid "Settings"
+msgstr "Instellingen"
+
+#: customtaxorder.php:246
 msgid "Auto-Sort Queries of this Taxonomy"
 msgstr "Auto-Sorteer Queries van deze Taxonomie"
 
-#: customtaxorder.php:248
+#: customtaxorder.php:254
 msgid "Save Settings"
 msgstr "Sla Instellingen op"
 
-#: customtaxorder.php:339
+#: customtaxorder.php:347
 msgid "Order updated successfully."
 msgstr "Sorteer volgorde bijgewerkt."
 
-#: customtaxorder.php:341
+#: customtaxorder.php:349
 msgid "An error occured, order has not been saved."
 msgstr "Er ging iets mis, de sorteer volgorde is niet opgeslagen."
 

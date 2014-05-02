@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/custom-taxonomy-order-ne/
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.4.9
+Version: 2.5.0
 Author: Marcel Pol
 Author URI: http://zenoweb.nl/
 License: GPLv2 or later
@@ -135,7 +135,7 @@ function customtaxorder() {
 		$settings .= '<input type="radio" name="customtaxorder_settings[category]" value="0" ' . checked('0', $options['category'], false) . ' /> <label for="customtaxorder_settings[category]">' . __('Order by ID (default).', 'customtaxorder') . '</label><br />';
 		$settings .= '<input type="radio" name="customtaxorder_settings[category]" value="1" ' . checked('1', $options['category'], false) . ' /> <label for="customtaxorder_settings[category]">' . __('Custom Order as defined above.', 'customtaxorder') . '</label><br />';
 		$settings .= '<input type="radio" name="customtaxorder_settings[category]" value="2" ' . checked('2', $options['category'], false) . ' /> <label for="customtaxorder_settings[category]">' . __('Alphabetical Order.', 'customtaxorder') . '</label><br />';
-		$tax_label = 'Categories';
+		$tax_label = __('Categories', 'customtaxorder');
 		$tax = 'category';
 	} else {
 		$args = array( 'public' => true, '_builtin' => false );
@@ -183,7 +183,7 @@ function customtaxorder() {
 ?>
 <div class='wrap'>
 	<?php screen_icon('customtaxorder'); ?>
-	<h2><?php _e('Order ' . $tax_label, 'customtaxorder'); ?></h2>
+	<h2><?php echo __('Order ', 'customtaxorder') . $tax_label; ?></h2>
 	<form name="custom-order-form" method="post" action="">
 		<?php
 		$args = array(

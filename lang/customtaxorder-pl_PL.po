@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Custom Taxonomy Order NE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-22 12:39+0100\n"
+"POT-Creation-Date: 2014-05-02 14:07+0200\n"
 "PO-Revision-Date: 2014-03-24 10:33+0100\n"
 "Last-Translator: \n"
 "Language-Team: Webidea.pl <paweldata@webidea.pl>\n"
@@ -44,6 +44,10 @@ msgstr "Własna kolejność zdefiniowana powyżej."
 msgid "Alphabetical Order."
 msgstr "Kolejność alfabetyczna."
 
+#: customtaxorder.php:138
+msgid "Categories"
+msgstr ""
+
 #: customtaxorder.php:201
 msgid ""
 "Order the taxonomies by dragging and dropping them into the desired order."
@@ -77,19 +81,23 @@ msgstr "Sortuj terminy podrzędne"
 msgid "No terms found"
 msgstr "Nie znaleziono żadnego terminu"
 
-#: customtaxorder.php:242
+#: customtaxorder.php:243 customtaxorder.php:458
+msgid "Settings"
+msgstr ""
+
+#: customtaxorder.php:246
 msgid "Auto-Sort Queries of this Taxonomy"
 msgstr "Włącz funkcję Auto-Sort dla zapytań dla tej taksonomii"
 
-#: customtaxorder.php:248
+#: customtaxorder.php:254
 msgid "Save Settings"
 msgstr "Zapisz ustawienia"
 
-#: customtaxorder.php:339
+#: customtaxorder.php:347
 msgid "Order updated successfully."
 msgstr "Kolejność zapisana."
 
-#: customtaxorder.php:341
+#: customtaxorder.php:349
 msgid "An error occured, order has not been saved."
 msgstr "Wystąpił błąd podczas zapisywania kolejności."
 

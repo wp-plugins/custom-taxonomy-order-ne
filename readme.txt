@@ -25,6 +25,7 @@ It is a continuation (or fork) of Custom Taxonomy Order, which has been disconti
 * it_IT Matteo Boria
 * nl_NL [Marcel Pol](http://zenoweb.nl)
 * pl_PL [Paweł Data](webidea.pl)
+* ru_RU Alex Rumyantsev
 
 == Installation ==
 
@@ -52,6 +53,11 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.5.0 =
+* Added ru_RU (Alex Rumyantsev)
+* Small gettext fixes
+* update nl_NL
 
 = 2.4.9 =
 * Multisite activation doesn't work if it isn't done network wide
