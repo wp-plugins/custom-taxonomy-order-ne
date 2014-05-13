@@ -22,6 +22,7 @@ It is a continuation (or fork) of Custom Taxonomy Order, which has been disconti
 = Languages =
 
 * es_ES [Andrew Kurtis](http://webhostinghub.com)
+* fr_FR [Jean-Christophe Brebion](http://jcbrebion.com)
 * it_IT Matteo Boria
 * nl_NL [Marcel Pol](http://zenoweb.nl)
 * pl_PL [Paweł Data](webidea.pl)
@@ -53,6 +54,9 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.5.1 =
+* Added fr_FR (Jean-Christophe Brebion)
 
 = 2.5.0 =
 * Added ru_RU (Alex Rumyantsev)
