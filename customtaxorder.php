@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/custom-taxonomy-order-ne/
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.5.1
+Version: 2.5.2
 Author: Marcel Pol
 Author URI: http://zenoweb.nl/
 License: GPLv2 or later
@@ -46,7 +46,7 @@ function customtaxorder_settings_validate($input) {
 			$input['category'] = 0; // default
 		}
 	}
-	$args = array( 'public' => true, '_builtin' => false );
+	$args = array( 'public' => true );
 	$output = 'objects';
 	$taxonomies = get_taxonomies( $args, $output );
 	foreach ( $taxonomies as $taxonomy ) {
@@ -60,11 +60,10 @@ function customtaxorder_settings_validate($input) {
 }
 
 function customtaxorder_menu() {
-	$args = array( 'public' => true, '_builtin' => false );
+	$args = array( 'public' => true );
 	$output = 'objects';
 	$taxonomies = get_taxonomies($args, $output);
 	add_menu_page(__('Term Order', 'customtaxorder'), __('Term Order', 'customtaxorder'), 'manage_categories', 'customtaxorder', 'customtaxorder', 'dashicons-images-alt', 122.35);
-	add_submenu_page('customtaxorder', __('Order Categories', 'customtaxorder'), __('Order Categories', 'customtaxorder'), 'manage_categories', 'customtaxorder', 'customtaxorder');
 	foreach ($taxonomies as $taxonomy ) {
 		add_submenu_page('customtaxorder', __('Order ', 'customtaxorder') . $taxonomy->label, __('Order ', 'customtaxorder') . $taxonomy->label, 'manage_categories', 'customtaxorder-'.$taxonomy->name, 'customtaxorder');
 	}
@@ -118,7 +117,7 @@ function customtaxorder() {
 	$settings = ''; // The input and text for the taxonomy that's shown
 	$parent_ID = 0;
 	if ( $_GET['page'] == 'customtaxorder' ) {
-		$args = array( 'public' => true, '_builtin' => false );
+		$args = array( 'public' => true );
 		$output = 'objects';
 		$taxonomies = get_taxonomies( $args, $output );
 		if ( !empty( $taxonomies ) ) {
@@ -138,7 +137,7 @@ function customtaxorder() {
 		$tax_label = __('Categories', 'customtaxorder');
 		$tax = 'category';
 	} else {
-		$args = array( 'public' => true, '_builtin' => false );
+		$args = array( 'public' => true );
 		$output = 'objects';
 		$taxonomies = get_taxonomies( $args, $output );
 		if ( !empty( $taxonomies ) ) {
@@ -408,10 +407,16 @@ add_filter('get_terms_orderby', 'customtaxorder_apply_order_filter', 10, 2);
 function customtaxorder_wp_get_object_terms_order_filter( $terms ) {
 	global $customtaxorder_settings;
 	$options = $customtaxorder_settings;
-	if ( isset( $terms[0]->taxonomy ) ) {
-		$taxonomy = $terms[0]->taxonomy;
-	} else {
-		return $terms; // not an array with objects
+	if (empty($terms)) {
+		return $terms;
+	}
+	foreach ($terms as $term) {
+		if ( isset( $term->taxonomy ) ) {
+			$taxonomy = $term->taxonomy;
+		} else {
+			return $terms; // not an array with objects
+		}
+		break;
 	}
 	if ( !isset ( $options[$taxonomy] ) ) {
 		$options[$taxonomy] = 0; // default if not set in options yet
@@ -424,6 +429,7 @@ function customtaxorder_wp_get_object_terms_order_filter( $terms ) {
 }
 add_filter( 'wp_get_object_terms', 'customtaxorder_wp_get_object_terms_order_filter', 10, 3 );
 add_filter( 'get_terms', 'customtaxorder_wp_get_object_terms_order_filter', 10, 3 );
+add_filter( 'tag_cloud_sort', 'customtaxorder_wp_get_object_terms_order_filter', 10, 3 );
 
 
 /*

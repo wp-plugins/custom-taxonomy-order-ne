@@ -2,7 +2,7 @@
 Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories
 Requires at least: 3.0
-Tested up to: 3.9.0
+Tested up to: 3.9.1
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -54,6 +54,10 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.5.2 =
+* Also be able to sort the builtin taxonomies
+* Fix bug with sorting tags
 
 = 2.5.1 =
 * Added fr_FR (Jean-Christophe Brebion)
