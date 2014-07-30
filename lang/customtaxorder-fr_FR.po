@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Taxonomy Order NE\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-02 14:07+0200\n"
+"PO-Revision-Date: 2014-05-13 10:58+0100\n"
+"Last-Translator: Jean-Christophe Brebion <pro@jcbrebion.com>\n"
+"Language-Team: Jean-Christophe Brebion <pro@jcbrebion.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: customtaxorder.php:66
+msgid "Term Order"
+msgstr "Ordre"
+
+#: customtaxorder.php:67
+msgid "Order Categories"
+msgstr "Ordre des Catégories"
+
+#: customtaxorder.php:69 customtaxorder.php:186
+msgid "Order "
+msgstr "Ordre des  "
+
+#: customtaxorder.php:135 customtaxorder.php:151
+msgid "Order by ID (default)."
+msgstr "Ordre par ID (par défaut)."
+
+#: customtaxorder.php:136 customtaxorder.php:152
+msgid "Custom Order as defined above."
+msgstr "Ordre personnalisé (tel que défini ci-dessus)."
+
+#: customtaxorder.php:137 customtaxorder.php:153
+msgid "Alphabetical Order."
+msgstr "Ordre alphabétique."
+
+#: customtaxorder.php:138
+msgid "Categories"
+msgstr "Catégories"
+
+#: customtaxorder.php:201
+msgid ""
+"Order the taxonomies by dragging and dropping them into the desired order."
+msgstr ""
+"Triez les taxonomies en effectuant un glissé-déposé des termes dans l'ordre "
+"souhaité."
+
+#: customtaxorder.php:211
+msgid "Return to Parent"
+msgstr "Retour au Parent"
+
+#: customtaxorder.php:215
+msgid "Update Order"
+msgstr "Mettre à jour"
+
+#: customtaxorder.php:216
+msgid "Sort Alphabetical"
+msgstr "Tri alphabétique"
+
+#: customtaxorder.php:225
+msgid "Sub-"
+msgstr "Sous-"
+
+#: customtaxorder.php:225
+msgid "Choose a term from the drop down to order its sub-terms."
+msgstr ""
+"Choisissez un terme dans la liste déroulante pour ordonner ses termes "
+"enfants."
+
+#: customtaxorder.php:230
+msgid "Order Sub-terms"
+msgstr "Ordre des termes enfants"
+
+#: customtaxorder.php:236
+msgid "No terms found"
+msgstr "Aucun terme trouvé."
+
+#: customtaxorder.php:243 customtaxorder.php:458
+msgid "Settings"
+msgstr "Réglages"
+
+#: customtaxorder.php:246
+msgid "Auto-Sort Queries of this Taxonomy"
+msgstr "Tri automatique des requêtes pour cette Taxonomie."
+
+#: customtaxorder.php:254
+msgid "Save Settings"
+msgstr "Enregistrer les réglages"
+
+#: customtaxorder.php:347
+msgid "Order updated successfully."
+msgstr "Ordre mis à jour avec succès."
+
+#: customtaxorder.php:349
+msgid "An error occured, order has not been saved."
+msgstr "Une erreur s'est produite, l'ordre n'a pas été enregistré."
