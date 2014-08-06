@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customtaxorder-ru_RU\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-02 14:07+0200\n"
+"POT-Creation-Date: 2014-08-06 14:49+0200\n"
 "PO-Revision-Date: 2014-05-01 13:40+0400\n"
 "Last-Translator: Alex Rumyantsev <alex@nwpro.ru>\n"
 "Language-Team: LANGUAGE <ra@ecraft.ru>\n"
@@ -19,84 +19,96 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.6.5\n"
 
-#: customtaxorder.php:66
+#: customtaxorder.php:61
 msgid "Term Order"
 msgstr "Сортировка Рубрик"
 
-#: customtaxorder.php:67
-msgid "Order Categories"
-msgstr "Сортировать Рубрики"
-
-#: customtaxorder.php:69 customtaxorder.php:186
+#: customtaxorder.php:63 customtaxorder.php:176
 msgid "Order "
 msgstr "Сортировать "
 
-#: customtaxorder.php:135 customtaxorder.php:151
+#: customtaxorder.php:118
+msgid ""
+"The ordering of categories and custom taxonomy terms through a simple drag-"
+"and-drop interface."
+msgstr ""
+
+#: customtaxorder.php:120
+msgid "Go to the plugin's Homepage"
+msgstr ""
+
+#: customtaxorder.php:127
+msgid "Taxonomies"
+msgstr ""
+
+#: customtaxorder.php:145
 msgid "Order by ID (default)."
 msgstr "По ID (по умолчанию)."
 
-#: customtaxorder.php:136 customtaxorder.php:152
+#: customtaxorder.php:146
 msgid "Custom Order as defined above."
 msgstr "Уникальный порядок, как отсортировано выше."
 
-#: customtaxorder.php:137 customtaxorder.php:153
+#: customtaxorder.php:147
 msgid "Alphabetical Order."
 msgstr "По алфавиту."
 
-#: customtaxorder.php:138
-msgid "Categories"
-msgstr "Рубрики"
-
-#: customtaxorder.php:201
+#: customtaxorder.php:191
 msgid ""
 "Order the taxonomies by dragging and dropping them into the desired order."
 msgstr ""
 "Отсортируйте рубрики перетаскивая и устанавливая их в необходимом порядке."
 
-#: customtaxorder.php:211
+#: customtaxorder.php:201
 msgid "Return to Parent"
 msgstr "Вернуться к родителю"
 
-#: customtaxorder.php:215
+#: customtaxorder.php:205
 msgid "Update Order"
 msgstr "Сохранить порядок"
 
-#: customtaxorder.php:216
+#: customtaxorder.php:206
 msgid "Sort Alphabetical"
 msgstr "Сортировать по алфавиту"
 
-#: customtaxorder.php:225
+#: customtaxorder.php:215
 msgid "Sub-"
 msgstr "Вложенные "
 
-#: customtaxorder.php:225
+#: customtaxorder.php:215
 msgid "Choose a term from the drop down to order its sub-terms."
 msgstr "Выбрать рубрику из выпадающего меню для сортировки вложенных рубрик."
 
-#: customtaxorder.php:230
+#: customtaxorder.php:220
 msgid "Order Sub-terms"
 msgstr "Сортировать Вложенные рубрики"
 
-#: customtaxorder.php:236
+#: customtaxorder.php:226
 msgid "No terms found"
 msgstr "Рубрики не найдены"
 
-#: customtaxorder.php:243 customtaxorder.php:458
+#: customtaxorder.php:233 customtaxorder.php:465
 msgid "Settings"
 msgstr ""
 
-#: customtaxorder.php:246
+#: customtaxorder.php:236
 msgid "Auto-Sort Queries of this Taxonomy"
 msgstr "Как сортировать эти рубрики?"
 
-#: customtaxorder.php:254
+#: customtaxorder.php:244
 msgid "Save Settings"
 msgstr "Сохранить настройки"
 
-#: customtaxorder.php:347
+#: customtaxorder.php:337
 msgid "Order updated successfully."
 msgstr "Порядок сохранен."
 
-#: customtaxorder.php:349
+#: customtaxorder.php:339
 msgid "An error occured, order has not been saved."
 msgstr "Ошибка, порядок не сохранен."
+
+#~ msgid "Order Categories"
+#~ msgstr "Сортировать Рубрики"
+
+#~ msgid "Categories"
+#~ msgstr "Рубрики"

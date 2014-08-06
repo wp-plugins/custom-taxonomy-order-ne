@@ -43,9 +43,18 @@ If you update from the original Custom Taxonomy Order please deactivate that fir
 
 == Frequently Asked Questions ==
 
-= No questions have been asked yet. =
+= I have a custom taxonomy that uses the Tag Cloud functionality, but it doesn't sort like it should. =
 
-Email any questions to marcel at zenoweb dot nl
+Can you tell me what is the name for the taxonomy?
+In the customtaxorder_wp_get_object_terms_order_filter it needs to be added, and the get_terms filter should not run 
+on that taxonomy. The tag_cloud_sort filter should do that.
+
+= I'm using the_tags function, but it doesn't sort as it should. =
+
+There is a bug with the the_tags function, where it will sort according to the setting for categories. 
+And yes, that is strange :).
+
+Email any other questions to marcel at zenoweb dot nl
 
 == Screenshots ==
 
@@ -54,6 +63,12 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.5.3 =
+* New default settings page
+* Filter added for get_the_terms
+* Don't filter tags at get_terms filtering
+* Updated nl_NL
 
 = 2.5.2 =
 * Also be able to sort the builtin taxonomies
