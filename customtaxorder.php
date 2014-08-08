@@ -419,6 +419,8 @@ function customtaxorder_wp_get_object_terms_order_filter( $terms ) {
 			if ( $taxonomy == 'post_tag' || $taxonomy == 'product_tag' ) {
 				// no filtering so the test in wp_generate_tag_cloud() works out right for us
 				// filtering will happen in the tag_cloud_sort filter sometime later
+				// post_tag = default tags
+				// product_tag = woocommerce product tags
 				return $terms;
 			}
 		}
