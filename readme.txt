@@ -59,12 +59,12 @@ And yes, that is strange :).
 There is an action that you can use with add_action. It is being run when saving the order of terms in the admin page.
 You could add the following example to your functions.php and work from there.
 
-<?php
-function custom_action($new_order) {
-	print_r($new_order);
-}
-add_action('customtaxorder_update_order', 'custom_action');
-?>
+	<?php
+	function custom_action($new_order) {
+		print_r($new_order);
+	}
+	add_action('customtaxorder_update_order', 'custom_action');
+	?>
 
 Email any other questions to marcel at zenoweb dot nl
 
