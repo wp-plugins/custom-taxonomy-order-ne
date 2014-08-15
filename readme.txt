@@ -2,7 +2,7 @@
 Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories
 Requires at least: 3.0
-Tested up to: 3.9.1
+Tested up to: 3.9.2
 Stable tag: trunk
 License: GPLv2 or later
 
@@ -54,6 +54,18 @@ on that taxonomy. The tag_cloud_sort filter should do that.
 There is a bug with the the_tags function, where it will sort according to the setting for categories. 
 And yes, that is strange :).
 
+= Is there an API? =
+
+There is an action that you can use with add_action. It is being run when saving the order of terms in the admin page.
+You could add the following example to your functions.php and work from there.
+
+<?php
+function custom_action($new_order) {
+	print_r($new_order);
+}
+add_action('customtaxorder_update_order', 'custom_action');
+?>
+
 Email any other questions to marcel at zenoweb dot nl
 
 == Screenshots ==
@@ -63,6 +75,9 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.5.4 =
+* Add action for saving the terms
 
 = 2.5.3 =
 * New default settings page
