@@ -76,6 +76,9 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.5.5 =
+* Some Compatibility with WPML Plugin
+
 = 2.5.4 =
 * Add action for saving the terms
 
