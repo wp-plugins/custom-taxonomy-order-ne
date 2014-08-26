@@ -77,65 +77,83 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 == Changelog ==
 
 = 2.5.6 =
+* 2014-08-22
 * More compatibility with WPML
 
 = 2.5.5 =
+* 2014-08-20
 * Some Compatibility with WPML Plugin
 
 = 2.5.4 =
+* 2014-08-15
 * Add action for saving the terms
 
 = 2.5.3 =
+* 2014-08-06
 * New default settings page
 * Filter added for get_the_terms
 * Don't filter tags at get_terms filtering
 * Updated nl_NL
 
 = 2.5.2 =
+* 2014-06-30
 * Also be able to sort the builtin taxonomies
 * Fix bug with sorting tags
 
 = 2.5.1 =
+* 2014--5-13
 * Added fr_FR (Jean-Christophe Brebion)
 
 = 2.5.0 =
+* 2014-05-02
 * Added ru_RU (Alex Rumyantsev)
 * Small gettext fixes
 * update nl_NL
 
 = 2.4.9 =
+* 2014-04-15
 * Multisite activation doesn't work if it isn't done network wide
 
 = 2.4.8 =
+* 2014-04-11
 * Don't usort on an array which doesn't contain objects
 
 = 2.4.7 =
+* 2014-03-29
 * Also filter at the get_terms hook for get_terms() and wp_list_categories()
 
 = 2.4.6 =
+* 2014-03-24
 * Update pl_PL
 
 = 2.4.5 =
+* 2014-03-23
 * Improve html/css
 
 = 2.4.4 =
+* 2014-03-23
 * Remove obsolete images
 
 = 2.4.3 =
+* 2014-03-22
 * Add settings link
 
 = 2.4.2 =
+* 2014-03-22
 * New dashicon
 
 = 2.4.1 =
+* 2014-03-22
 * Add alphabetical sorting to options as well
 * Update Polish and Dutch
 
 = 2.4.0 =
+* 2014-03-18
 * Add Polish translation (Paweł Data)
 * Sort Alphabetically (landwire)
 
 = 2.3.9 =
+* 2014-02-25
 * Fix activation code to really generate term_order column
 
 = 2.3.8 =
