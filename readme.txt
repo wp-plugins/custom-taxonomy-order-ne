@@ -139,39 +139,50 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 * Fix activation code to really generate term_order column
 
 = 2.3.8 =
+* 2014-02-18
 * Ouch, remove testing code
 
 = 2.3.7 =
+* 2014-02-18
 * Fix activation on network install (Matteo Boria)
 
 = 2.3.6 =
+* 2014-01-26
 * Also add filter for wp_get_object_terms and wp_get_post_terms
 
 = 2.3.5 =
+* 2014-01-26
 * Only filter categories when auto-sort is enabled
 
 = 2.3.4 =
+* 2014-01-25
 * Filter added for get_the_categories
 
 = 2.3.3 =
+* 2014-01-25
 * Fix errors "undefined index" for undefined options
 
 = 2.3.2 =
+* 2014-01-03
 * Use print for translated substring (Matteo Boria)
 * Add Italian Translation (Matteo Boria)
 
 = 2.3.1 =
+* 2013-12-30
 * Fix PHP error-notice when activating
 
 = 2.3 =
+* 2013-12-10
 * Add es_ES translataion, thanks Andrew and Jelena
 
 = 2.2 =
+* 2013-10-20
 * do init stuff in the init function
 * also update term_order in term_relationships table
 * security update: validate input with $wpdb->prepare()
 
 = 2.1 =
+* 2013-10-10
 * renamed/forked as Custom Taxonomy Order New Edition
 * fixed a bug with ordering in the backend
 * add localisation
