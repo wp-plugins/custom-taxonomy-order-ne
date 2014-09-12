@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-06 14:49+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: customtaxorder.php:61
+msgid "Term Order"
+msgstr ""
+
+#: customtaxorder.php:63 customtaxorder.php:176
+msgid "Order "
+msgstr ""
+
+#: customtaxorder.php:118
+msgid ""
+"The ordering of categories and custom taxonomy terms through a simple drag-"
+"and-drop interface."
+msgstr ""
+
+#: customtaxorder.php:120
+msgid "Go to the plugin's Homepage"
+msgstr ""
+
+#: customtaxorder.php:127
+msgid "Taxonomies"
+msgstr ""
+
+#: customtaxorder.php:145
+msgid "Order by ID (default)."
+msgstr ""
+
+#: customtaxorder.php:146
+msgid "Custom Order as defined above."
+msgstr ""
+
+#: customtaxorder.php:147
+msgid "Alphabetical Order."
+msgstr ""
+
+#: customtaxorder.php:191
+msgid ""
+"Order the taxonomies by dragging and dropping them into the desired order."
+msgstr ""
+
+#: customtaxorder.php:201
+msgid "Return to Parent"
+msgstr ""
+
+#: customtaxorder.php:205
+msgid "Update Order"
+msgstr ""
+
+#: customtaxorder.php:206
+msgid "Sort Alphabetical"
+msgstr ""
+
+#: customtaxorder.php:215
+msgid "Sub-"
+msgstr ""
+
+#: customtaxorder.php:215
+msgid "Choose a term from the drop down to order its sub-terms."
+msgstr ""
+
+#: customtaxorder.php:220
+msgid "Order Sub-terms"
+msgstr ""
+
+#: customtaxorder.php:226
+msgid "No terms found"
+msgstr ""
+
+#: customtaxorder.php:233 customtaxorder.php:465
+msgid "Settings"
+msgstr ""
+
+#: customtaxorder.php:236
+msgid "Auto-Sort Queries of this Taxonomy"
+msgstr ""
+
+#: customtaxorder.php:244
+msgid "Save Settings"
+msgstr ""
+
+#: customtaxorder.php:337
+msgid "Order updated successfully."
+msgstr ""
+
+#: customtaxorder.php:339
+msgid "An error occured, order has not been saved."
+msgstr ""
