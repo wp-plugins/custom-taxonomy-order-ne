@@ -76,6 +76,10 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.5.7 =
+* 2014-09-12
+* Fix notices with defensive programming
+
 = 2.5.6 =
 * 2014-08-22
 * More compatibility with WPML
