@@ -43,10 +43,15 @@ If you update from the original Custom Taxonomy Order please deactivate that fir
 
 == Frequently Asked Questions ==
 
+= I sorted the terms in the WordPress backend, but I don't see it changed in the frontend =
+
+Did you set the option for that taxonomy to use that custom order? Make sure to check it to have the filters run
+with your taxonomy.
+
 = How do I sort the terms when using a custom query? =
 
 You can apply the sorting for the taxonomy by using:
-	'orderby' => 'term_order'
+	'orderby' => 'term_order'.
 
 = I have a custom taxonomy that uses the Tag Cloud functionality, but it doesn't sort like it should. =
 
