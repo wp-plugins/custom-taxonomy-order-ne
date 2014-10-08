@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: trunk
+Stable tag: 2.5.7
 License: GPLv2 or later
 
 
@@ -46,12 +46,12 @@ If you update from the original Custom Taxonomy Order please deactivate that fir
 = I have a custom taxonomy that uses the Tag Cloud functionality, but it doesn't sort like it should. =
 
 Can you tell me what is the name for the taxonomy?
-In the customtaxorder_wp_get_object_terms_order_filter it needs to be added, and the get_terms filter should not run 
+In the customtaxorder_wp_get_object_terms_order_filter it needs to be added, and the get_terms filter should not run
 on that taxonomy. The tag_cloud_sort filter should do that.
 
 = I'm using the_tags function, but it doesn't sort as it should. =
 
-There is a bug with the the_tags function, where it will sort according to the setting for categories. 
+There is a bug with the the_tags function, where it will sort according to the setting for categories.
 And yes, that is strange :).
 
 = Is there an API? =
