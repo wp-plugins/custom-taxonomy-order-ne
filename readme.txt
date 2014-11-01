@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: mpol
-Tags: ordering, sorting, terms, custom taxonomies, term order, categories
+Tags: ordering, sorting, terms, custom taxonomies, term order, categories, category order
 Requires at least: 3.0
 Tested up to: 4.0
 Stable tag: 2.5.7
