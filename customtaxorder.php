@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/custom-taxonomy-order-ne/
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.5.7
+Version: 2.5.8
 Author: Marcel Pol
 Author URI: http://zenoweb.nl/
 License: GPLv2 or later
@@ -111,7 +111,7 @@ function customtaxorder() {
 	$options = $customtaxorder_settings;
 	$settings = ''; // The input and text for the taxonomy that's shown
 	$parent_ID = 0;
-	
+
 	// Remove filter for WPML
 	remove_filter( 'terms_clauses', array( $sitepress, 'terms_clauses' ), 10, 4 );
 	remove_filter( 'get_terms', array( $sitepress, 'get_terms_filter' ) );
@@ -481,14 +481,14 @@ add_filter( 'plugin_action_links', 'customtaxorder_links', 10, 2 );
 
 
 /*
- * customtaxorder_init
+ * customtaxorder_initialize
  * Function called at initialisation.
  * - Loads language files
  * - set defaults
  * - get settings
  */
 
-function customtaxorder_init() {
+function customtaxorder_initialize() {
 	global $customtaxorder_settings, $customtaxorder_defaults;
 
  	load_plugin_textdomain('customtaxorder', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
@@ -504,7 +504,7 @@ function customtaxorder_init() {
 	$customtaxorder_settings = get_option('customtaxorder_settings');
 	$customtaxorder_settings = wp_parse_args($customtaxorder_settings, $customtaxorder_defaults);
 }
-add_action('plugins_loaded', 'customtaxorder_init');
+add_action('plugins_loaded', 'customtaxorder_initialize');
 
 /*
  * customtaxorder_activate

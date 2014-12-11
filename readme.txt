@@ -2,7 +2,7 @@
 Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories, category order
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 2.5.7
 License: GPLv2 or later
 
@@ -16,6 +16,7 @@ simple drag-and-drop interface using the available WordPress scripts and styles.
 without any unnecessary scripts to load into the admin. It also falls in line gracefully with the look and feel
 of the WordPress interface.
 This plugin uses it's own menu in the backend.
+There is no Pro version, everything works in the Free version.
 
 It is a continuation (or fork) of Custom Taxonomy Order, which has been discontinued.
 
@@ -85,6 +86,10 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.5.8 =
+* 2014-12-11
+* Fix conflict with wp-catalogue plugin
 
 = 2.5.7 =
 * 2014-09-12
