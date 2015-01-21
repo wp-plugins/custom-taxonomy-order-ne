@@ -71,6 +71,10 @@ on that taxonomy. The tag_cloud_sort filter should do that.
 There is a bug with the the_tags function, where it will sort according to the setting for categories.
 And yes, that is strange :).
 
+= What capabilities are needed? =
+
+For sorting the terms you need the manage_categories capability.
+
 = Is there an API? =
 
 There is an action that you can use with add_action. It is being run when saving the order of terms in the admin page.
@@ -92,6 +96,10 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.5.9 =
+* 2015-01-21
+* Add test for capability inside admin page as well.
 
 = 2.5.8 =
 * 2014-12-11
