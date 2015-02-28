@@ -100,6 +100,7 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 = 2.6.0 =
 * 2015-02-28
+* Separate settingspage to own php-file.
 * Add de_DE (thanks Patrick Skiebe).
 
 = 2.5.9 =
