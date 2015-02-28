@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories, category order
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 2.5.9
+Stable tag: 2.6.0
 License: GPLv2 or later
 
 
