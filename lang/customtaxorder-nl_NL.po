@@ -1,0 +1,137 @@
+# Custom Tax Order NE.
+# Copyright (C) 2013-2014 Marcel Pol
+# This file is distributed under the same license as the Custom Tax Order NE package.
+# Marcel Pol <marcel@timelord.nl>, 2013-2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-28 19:05+0100\n"
+"PO-Revision-Date: 2015-02-28 19:06+0100\n"
+"Last-Translator: Marcel Pol <marcel@timelord.nl>\n"
+"Language-Team: NL <nl@li.org>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#: customtaxorder.php:40
+msgid "Custom Taxonomy Order NE settings"
+msgstr "Custom Taxonomy Order NE instellingen"
+
+#: customtaxorder.php:66
+msgid "Term Order"
+msgstr "Term Volgorde"
+
+#: customtaxorder.php:68 page-customtaxorder.php:85
+msgid "Order "
+msgstr "Sorteer "
+
+#: customtaxorder.php:149
+msgid "Order updated successfully."
+msgstr "Sorteer volgorde bijgewerkt."
+
+#: customtaxorder.php:152
+msgid "An error occured, order has not been saved."
+msgstr "Er ging iets mis, de sorteer volgorde is niet opgeslagen."
+
+#: customtaxorder.php:284 page-customtaxorder.php:142
+msgid "Settings"
+msgstr "Instellingen"
+
+#: page-customtaxorder.php:11
+msgid "Cheatin&#8217; uh?"
+msgstr "Valsspelen, he?"
+
+#: page-customtaxorder.php:27
+msgid ""
+"The ordering of categories and custom taxonomy terms through a simple drag-"
+"and-drop interface."
+msgstr ""
+"Het sorteren van categorieën en aangepaste taxonomietermen met behulp van "
+"een eenvoudige drag-en-drop interface."
+
+#: page-customtaxorder.php:29
+msgid "Go to the plugin's Homepage"
+msgstr "Ga naar de Homepage van de plugin"
+
+#: page-customtaxorder.php:36
+msgid "Taxonomies"
+msgstr "Taxonomieën"
+
+#: page-customtaxorder.php:54
+msgid "Order by ID (default)."
+msgstr "Sorteer volgens ID (standaard)."
+
+#: page-customtaxorder.php:55
+msgid "Custom Order as defined above."
+msgstr "Aangepaste Volgorde zoals boven aangegeven."
+
+#: page-customtaxorder.php:56
+msgid "Alphabetical Order."
+msgstr "Alfabetische Volgorde."
+
+#: page-customtaxorder.php:100
+msgid ""
+"Order the taxonomies by dragging and dropping them into the desired order."
+msgstr "Sorteer de taxonomieën door ze te verslepen naar de gewenste volgorde."
+
+#: page-customtaxorder.php:110
+msgid "Return to Parent"
+msgstr "Terug naar Parent"
+
+#: page-customtaxorder.php:114
+msgid "Update Order"
+msgstr "Volgorde Bijwerken"
+
+#: page-customtaxorder.php:115
+msgid "Sort Alphabetical"
+msgstr "Sorteer Alfabetisch"
+
+#: page-customtaxorder.php:124
+msgid "Sub-"
+msgstr "Sub-"
+
+#: page-customtaxorder.php:124
+msgid "Choose a term from the drop down to order its sub-terms."
+msgstr "Kies een term van de drop-down om de sub-terms te sorteren."
+
+#: page-customtaxorder.php:129
+msgid "Order Sub-terms"
+msgstr "Sorteer Sub-terms"
+
+#: page-customtaxorder.php:135
+msgid "No terms found"
+msgstr "Geen terms gevonden"
+
+#: page-customtaxorder.php:145
+msgid "Auto-Sort Queries of this Taxonomy"
+msgstr "Auto-Sorteer Queries van deze Taxonomie"
+
+#: page-customtaxorder.php:153
+msgid "Save Settings"
+msgstr "Sla Instellingen op"
+
+#~ msgid "Order Categories"
+#~ msgstr "Sorteer Categorieën"
+
+#~ msgid "Categories"
+#~ msgstr "Categorieën"
+
+#~ msgid "Order by ID (default)"
+#~ msgstr "Sorteer volgens ID (standaard)"
+
+#~ msgid ""
+#~ "Check this box if you want to enable Automatic Sorting of all instances "
+#~ "from this taxonomy."
+#~ msgstr ""
+#~ "Check deze box als je Automatisch Sorteren wilt gebruiken in deze "
+#~ "taxonomie."
+
+#~ msgid "Auto-Sort Queries"
+#~ msgstr "Auto-Sorteer Queries"
+
+#~ msgid "Order the "
+#~ msgstr "Sorteer de "
