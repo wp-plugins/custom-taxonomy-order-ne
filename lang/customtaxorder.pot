@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-06 14:49+0200\n"
+"POT-Creation-Date: 2015-02-28 19:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,89 +17,97 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: customtaxorder.php:61
+#: customtaxorder.php:40
+msgid "Custom Taxonomy Order NE settings"
+msgstr ""
+
+#: customtaxorder.php:66
 msgid "Term Order"
 msgstr ""
 
-#: customtaxorder.php:63 customtaxorder.php:176
+#: customtaxorder.php:68 page-customtaxorder.php:85
 msgid "Order "
 msgstr ""
 
-#: customtaxorder.php:118
+#: customtaxorder.php:149
+msgid "Order updated successfully."
+msgstr ""
+
+#: customtaxorder.php:152
+msgid "An error occured, order has not been saved."
+msgstr ""
+
+#: customtaxorder.php:284 page-customtaxorder.php:142
+msgid "Settings"
+msgstr ""
+
+#: page-customtaxorder.php:11
+msgid "Cheatin&#8217; uh?"
+msgstr ""
+
+#: page-customtaxorder.php:27
 msgid ""
 "The ordering of categories and custom taxonomy terms through a simple drag-"
 "and-drop interface."
 msgstr ""
 
-#: customtaxorder.php:120
+#: page-customtaxorder.php:29
 msgid "Go to the plugin's Homepage"
 msgstr ""
 
-#: customtaxorder.php:127
+#: page-customtaxorder.php:36
 msgid "Taxonomies"
 msgstr ""
 
-#: customtaxorder.php:145
+#: page-customtaxorder.php:54
 msgid "Order by ID (default)."
 msgstr ""
 
-#: customtaxorder.php:146
+#: page-customtaxorder.php:55
 msgid "Custom Order as defined above."
 msgstr ""
 
-#: customtaxorder.php:147
+#: page-customtaxorder.php:56
 msgid "Alphabetical Order."
 msgstr ""
 
-#: customtaxorder.php:191
+#: page-customtaxorder.php:100
 msgid ""
 "Order the taxonomies by dragging and dropping them into the desired order."
 msgstr ""
 
-#: customtaxorder.php:201
+#: page-customtaxorder.php:110
 msgid "Return to Parent"
 msgstr ""
 
-#: customtaxorder.php:205
+#: page-customtaxorder.php:114
 msgid "Update Order"
 msgstr ""
 
-#: customtaxorder.php:206
+#: page-customtaxorder.php:115
 msgid "Sort Alphabetical"
 msgstr ""
 
-#: customtaxorder.php:215
+#: page-customtaxorder.php:124
 msgid "Sub-"
 msgstr ""
 
-#: customtaxorder.php:215
+#: page-customtaxorder.php:124
 msgid "Choose a term from the drop down to order its sub-terms."
 msgstr ""
 
-#: customtaxorder.php:220
+#: page-customtaxorder.php:129
 msgid "Order Sub-terms"
 msgstr ""
 
-#: customtaxorder.php:226
+#: page-customtaxorder.php:135
 msgid "No terms found"
 msgstr ""
 
-#: customtaxorder.php:233 customtaxorder.php:465
-msgid "Settings"
-msgstr ""
-
-#: customtaxorder.php:236
+#: page-customtaxorder.php:145
 msgid "Auto-Sort Queries of this Taxonomy"
 msgstr ""
 
-#: customtaxorder.php:244
+#: page-customtaxorder.php:153
 msgid "Save Settings"
-msgstr ""
-
-#: customtaxorder.php:337
-msgid "Order updated successfully."
-msgstr ""
-
-#: customtaxorder.php:339
-msgid "An error occured, order has not been saved."
 msgstr ""

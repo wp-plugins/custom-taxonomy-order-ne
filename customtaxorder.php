@@ -37,7 +37,7 @@ add_action('admin_init', 'customtaxorder_register_settings');
 function customtaxorder_update_settings() {
 	global $customtaxorder_settings, $customtaxorder_defaults;
 	if ( isset($customtaxorder_settings['update']) ) {
-		echo '<div class="updated fade" id="message"><p>Custom Taxonomy Order NE settings '.$customtaxorder_settings['update'].'.</p></div>';
+		echo '<div class="updated fade" id="message"><p>' . __('Custom Taxonomy Order NE settings', 'customtaxorder') . ' ' . $customtaxorder_settings['update'] . '</p></div>';
 		unset($customtaxorder_settings['update']);
 		update_option('customtaxorder_settings', $customtaxorder_settings);
 	}

@@ -7,25 +7,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-06 14:49+0200\n"
-"PO-Revision-Date: 2014-08-06 14:52+0100\n"
+"POT-Creation-Date: 2015-02-28 19:05+0100\n"
+"PO-Revision-Date: 2015-02-28 19:06+0100\n"
 "Last-Translator: Marcel Pol <marcel@timelord.nl>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: NL <nl@li.org>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.10\n"
 
-#: customtaxorder.php:61
+#: customtaxorder.php:40
+msgid "Custom Taxonomy Order NE settings"
+msgstr "Custom Taxonomy Order NE instellingen"
+
+#: customtaxorder.php:66
 msgid "Term Order"
 msgstr "Term Volgorde"
 
-#: customtaxorder.php:63 customtaxorder.php:176
+#: customtaxorder.php:68 page-customtaxorder.php:85
 msgid "Order "
 msgstr "Sorteer "
 
-#: customtaxorder.php:118
+#: customtaxorder.php:149
+msgid "Order updated successfully."
+msgstr "Sorteer volgorde bijgewerkt."
+
+#: customtaxorder.php:152
+msgid "An error occured, order has not been saved."
+msgstr "Er ging iets mis, de sorteer volgorde is niet opgeslagen."
+
+#: customtaxorder.php:284 page-customtaxorder.php:142
+msgid "Settings"
+msgstr "Instellingen"
+
+#: page-customtaxorder.php:11
+msgid "Cheatin&#8217; uh?"
+msgstr "Valsspelen, he?"
+
+#: page-customtaxorder.php:27
 msgid ""
 "The ordering of categories and custom taxonomy terms through a simple drag-"
 "and-drop interface."
@@ -33,78 +53,66 @@ msgstr ""
 "Het sorteren van categorieën en aangepaste taxonomietermen met behulp van "
 "een eenvoudige drag-en-drop interface."
 
-#: customtaxorder.php:120
+#: page-customtaxorder.php:29
 msgid "Go to the plugin's Homepage"
 msgstr "Ga naar de Homepage van de plugin"
 
-#: customtaxorder.php:127
+#: page-customtaxorder.php:36
 msgid "Taxonomies"
 msgstr "Taxonomieën"
 
-#: customtaxorder.php:145
+#: page-customtaxorder.php:54
 msgid "Order by ID (default)."
 msgstr "Sorteer volgens ID (standaard)."
 
-#: customtaxorder.php:146
+#: page-customtaxorder.php:55
 msgid "Custom Order as defined above."
 msgstr "Aangepaste Volgorde zoals boven aangegeven."
 
-#: customtaxorder.php:147
+#: page-customtaxorder.php:56
 msgid "Alphabetical Order."
 msgstr "Alfabetische Volgorde."
 
-#: customtaxorder.php:191
+#: page-customtaxorder.php:100
 msgid ""
 "Order the taxonomies by dragging and dropping them into the desired order."
 msgstr "Sorteer de taxonomieën door ze te verslepen naar de gewenste volgorde."
 
-#: customtaxorder.php:201
+#: page-customtaxorder.php:110
 msgid "Return to Parent"
 msgstr "Terug naar Parent"
 
-#: customtaxorder.php:205
+#: page-customtaxorder.php:114
 msgid "Update Order"
 msgstr "Volgorde Bijwerken"
 
-#: customtaxorder.php:206
+#: page-customtaxorder.php:115
 msgid "Sort Alphabetical"
 msgstr "Sorteer Alfabetisch"
 
-#: customtaxorder.php:215
+#: page-customtaxorder.php:124
 msgid "Sub-"
 msgstr "Sub-"
 
-#: customtaxorder.php:215
+#: page-customtaxorder.php:124
 msgid "Choose a term from the drop down to order its sub-terms."
 msgstr "Kies een term van de drop-down om de sub-terms te sorteren."
 
-#: customtaxorder.php:220
+#: page-customtaxorder.php:129
 msgid "Order Sub-terms"
 msgstr "Sorteer Sub-terms"
 
-#: customtaxorder.php:226
+#: page-customtaxorder.php:135
 msgid "No terms found"
 msgstr "Geen terms gevonden"
 
-#: customtaxorder.php:233 customtaxorder.php:465
-msgid "Settings"
-msgstr "Instellingen"
-
-#: customtaxorder.php:236
+#: page-customtaxorder.php:145
 msgid "Auto-Sort Queries of this Taxonomy"
 msgstr "Auto-Sorteer Queries van deze Taxonomie"
 
-#: customtaxorder.php:244
+#: page-customtaxorder.php:153
 msgid "Save Settings"
 msgstr "Sla Instellingen op"
-
-#: customtaxorder.php:337
-msgid "Order updated successfully."
-msgstr "Sorteer volgorde bijgewerkt."
-
-#: customtaxorder.php:339
-msgid "An error occured, order has not been saved."
-msgstr "Er ging iets mis, de sorteer volgorde is niet opgeslagen."
 
 #~ msgid "Order Categories"
 #~ msgstr "Sorteer Categorieën"
