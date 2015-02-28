@@ -28,6 +28,7 @@ It is a continuation (or fork) of Custom Taxonomy Order, which has been disconti
 
 = Languages =
 
+* de_DE [Patrick Skiebe](http://skiebe.eu)
 * es_ES [Andrew Kurtis](http://webhostinghub.com)
 * fr_FR [Jean-Christophe Brebion](http://jcbrebion.com)
 * it_IT Matteo Boria
@@ -96,6 +97,10 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.6.0 =
+* 2015-02-28
+* Add de_DE (thanks Patrick Skiebe).
 
 = 2.5.9 =
 * 2015-01-21
