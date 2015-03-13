@@ -98,6 +98,10 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.6.1 =
+* 2015-03-13
+* Wrap radio buttons inside label, so the label works (thanks Andrew Patton).
+
 = 2.6.0 =
 * 2015-02-28
 * Separate settingspage to own php-file.
