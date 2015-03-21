@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/custom-taxonomy-order-ne/
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.6.1
+Version: 2.6.2
 Author: Marcel Pol
 Author URI: http://zenoweb.nl/
 License: GPLv2 or later
@@ -330,19 +330,25 @@ function _customtaxorder_activate() {
 function customtaxorder_activate($networkwide) {
 	global $wpdb;
 	if (function_exists('is_multisite') && is_multisite()) {
-		$curr_blog = $wpdb->blogid;
 		$blogids = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
 		foreach ($blogids as $blog_id) {
 			switch_to_blog($blog_id);
 			_customtaxorder_activate();
+			restore_current_blog();
 		}
-		switch_to_blog($curr_blog);
 	} else {
 		_customtaxorder_activate();
 	}
 }
-register_activation_hook(__FILE__, 'customtaxorder_activate');
+register_activation_hook( __FILE__, 'customtaxorder_activate' );
 
+
+function customtaxorder_activate_new_site($blog_id) {
+	switch_to_blog($blog_id);
+	_customtaxorder_activate();
+	restore_current_blog();
+}
+add_action( 'wpmu_new_blog', 'customtaxorder_activate_new_site' );
 
 // include Settingspage
 include('page-customtaxorder.php');

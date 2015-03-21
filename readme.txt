@@ -3,7 +3,7 @@ Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories, category order
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 2.6.1
+Stable tag: 2.6.2
 License: GPLv2 or later
 
 
@@ -97,6 +97,10 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.6.2 =
+* 2015-03-21
+* Better suppport for WPMU, alsi set up new blogs (thanks Andrew Patton).
 
 = 2.6.1 =
 * 2015-03-13
