@@ -100,7 +100,7 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 = 2.6.2 =
 * 2015-03-21
-* Better suppport for WPMU, alsi set up new blogs (thanks Andrew Patton).
+* Better suppport for WPMU, als set up new blogs (thanks Andrew Patton).
 
 = 2.6.1 =
 * 2015-03-13
