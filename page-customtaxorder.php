@@ -32,6 +32,16 @@ function customtaxorder() {
 		$args = array( 'public' => true );
 		$output = 'objects';
 		$taxonomies = get_taxonomies( $args, $output );
+
+		// Also make the link_category available if activated.
+		$linkplugin = "link-manager/link-manager.php";
+		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		if ( is_plugin_active($linkplugin) ) {
+			$args = array( 'name' => 'link_category' );
+			$taxonomies2 = get_taxonomies( $args, $output );
+			$taxonomies = array_merge($taxonomies, $taxonomies2);
+		}
+
 		if ( !empty( $taxonomies ) ) {
 			echo "<h3>" . __('Taxonomies', 'customtaxorder') . "</h3><ul>";
 			foreach ( $taxonomies as $taxonomy ) {
@@ -44,6 +54,16 @@ function customtaxorder() {
 		$args = array( 'public' => true );
 		$output = 'objects';
 		$taxonomies = get_taxonomies( $args, $output );
+
+		// Also make the link_category available if activated.
+		$linkplugin = "link-manager/link-manager.php";
+		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		if ( is_plugin_active($linkplugin) ) {
+			$args = array( 'name' => 'link_category' );
+			$taxonomies2 = get_taxonomies( $args, $output );
+			$taxonomies = array_merge($taxonomies, $taxonomies2);
+		}
+
 		if ( !empty( $taxonomies ) ) {
 			foreach ( $taxonomies as $taxonomy ) {
 				$com_page = 'customtaxorder-'.$taxonomy->name;

@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/custom-taxonomy-order-ne/
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.6.2
+Version: 2.6.3
 Author: Marcel Pol
 Author URI: http://zenoweb.nl/
 License: GPLv2 or later
@@ -63,6 +63,16 @@ function customtaxorder_menu() {
 	$args = array( 'public' => true );
 	$output = 'objects';
 	$taxonomies = get_taxonomies($args, $output);
+
+	// Also make the link_category available if activated.
+	$linkplugin = "link-manager/link-manager.php";
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	if ( is_plugin_active($linkplugin) ) {
+		$args = array( 'name' => 'link_category' );
+		$taxonomies2 = get_taxonomies( $args, $output );
+		$taxonomies = array_merge($taxonomies, $taxonomies2);
+	}
+
 	add_menu_page(__('Term Order', 'customtaxorder'), __('Term Order', 'customtaxorder'), 'manage_categories', 'customtaxorder', 'customtaxorder', 'dashicons-images-alt', 122.35);
 	foreach ($taxonomies as $taxonomy ) {
 		add_submenu_page('customtaxorder', __('Order ', 'customtaxorder') . $taxonomy->label, __('Order ', 'customtaxorder') . $taxonomy->label, 'manage_categories', 'customtaxorder-'.$taxonomy->name, 'customtaxorder');
