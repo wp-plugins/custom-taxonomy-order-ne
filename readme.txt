@@ -53,8 +53,13 @@ If you update from the original Custom Taxonomy Order please deactivate that fir
 
 = I sorted the terms in the WordPress backend, but I don't see it changed in the frontend =
 
-Did you set the option for that taxonomy to use that custom order? Make sure to check it to have the filters run
+Did you set the option for that taxonomy to use that custom order? Make sure to check it so the filters run
 with your taxonomy.
+
+= My custom taxonomy is not available in the menu page =
+
+This plugin will only offer to sort them when the taxonomy is set to public. Make sure you use 'register_taxonomy'
+with the public parameter set to true.
 
 = How do I sort the terms when using a custom query? =
 
