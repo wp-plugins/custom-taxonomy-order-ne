@@ -2,7 +2,7 @@
 Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories, category order
 Requires at least: 3.0
-Tested up to: 4.1
+Tested up to: 4.2
 Stable tag: 2.6.3
 License: GPLv2 or later
 
@@ -59,7 +59,7 @@ with your taxonomy.
 = My custom taxonomy is not available in the menu page =
 
 This plugin will only offer to sort them when the taxonomy is set to public. Make sure you use 'register_taxonomy'
-with the public parameter set to true.
+with the public parameter set to true (default).
 
 = How do I sort the terms when using a custom query? =
 
