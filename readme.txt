@@ -103,6 +103,11 @@ Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
 
+= 2.6.4 =
+* 2015-05-31
+* Add About page.
+* Update pot and nl_NL.
+
 = 2.6.3 =
 * 2015-03-25
 * Support Link Manager plugin.

@@ -25,9 +25,6 @@ function customtaxorder() {
 		<h2>Custom Taxonomy Order NE</h2>
 		<div class="order-widget">
 			<p><?php _e('The ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.', 'customtaxorder'); ?></p>
-			<p><a href="http://products.zenoweb.nl/free-wordpress-plugins/custom-taxonomy-order-ne/" target="blank">
-				<?php _e('Go to the plugin\'s Homepage','customtaxorder'); ?>
-			</a></p>
 		<?php
 		$args = array( 'public' => true );
 		$output = 'objects';
