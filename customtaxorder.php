@@ -301,8 +301,7 @@ function customtaxorder_about() {
 				<h3 class="widget-top"><?php _e('Review this plugin.', 'customtaxorder'); ?></h3>
 				<p><?php _e('If this plugin has any value to you, then please leave a review at', 'customtaxorder'); ?>
 					<a href="https://wordpress.org/support/view/plugin-reviews/custom-taxonomy-order-ne" target="_blank" title="<?php esc_attr_e('The plugin page at wordpress.org.', 'customtaxorder'); ?>">
-						<?php _e('the plugin page at wordpress.org', 'customtaxorder'); ?>
-					</a>.
+						<?php _e('the plugin page at wordpress.org', 'customtaxorder'); ?></a>.
 				</p>
 
 				<h3 class="widget-top"><?php _e('Donate to the EFF.', 'customtaxorder'); ?></h3>
