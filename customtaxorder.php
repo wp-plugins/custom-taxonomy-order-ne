@@ -3,7 +3,7 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/custom-taxonomy-order-ne/
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.6.4
+Version: 2.6.5
 Author: Marcel Pol
 Author URI: http://zenoweb.nl/
 License: GPLv2 or later
@@ -290,25 +290,25 @@ add_filter('get_the_categories', 'customtaxorder_order_categories', 10, 3);
 function customtaxorder_about() {
 	?>
 	<div class='wrap'>
-		<h2><?php _e('About Custom Taxonomy Order NE', 'customtaxorder'); ?></h2>
+		<h1><?php _e('About Custom Taxonomy Order NE', 'customtaxorder'); ?></h1>
 		<div id="poststuff" class="metabox-holder">
 			<div class="widget">
-				<h3 class="widget-top"><?php _e('About this plugin.', 'customtaxorder'); ?></h3>
+				<h2 class="widget-top"><?php _e('About this plugin.', 'customtaxorder'); ?></h2>
 				<p><?php _e('This plugin is being maintained by Marcel Pol from', 'customtaxorder'); ?>
 					<a href="http://zenoweb.nl" target="_blank" title="ZenoWeb">ZenoWeb</a>.
 				</p>
 
-				<h3 class="widget-top"><?php _e('Review this plugin.', 'customtaxorder'); ?></h3>
+				<h2 class="widget-top"><?php _e('Review this plugin.', 'customtaxorder'); ?></h2>
 				<p><?php _e('If this plugin has any value to you, then please leave a review at', 'customtaxorder'); ?>
 					<a href="https://wordpress.org/support/view/plugin-reviews/custom-taxonomy-order-ne" target="_blank" title="<?php esc_attr_e('The plugin page at wordpress.org.', 'customtaxorder'); ?>">
 						<?php _e('the plugin page at wordpress.org', 'customtaxorder'); ?></a>.
 				</p>
 
-				<h3 class="widget-top"><?php _e('Donate to the EFF.', 'customtaxorder'); ?></h3>
+				<h2 class="widget-top"><?php _e('Donate to the EFF.', 'customtaxorder'); ?></h2>
 				<p><?php _e('The Electronic Frontier Foundation is one of the few organisations that wants to keep the internet a free place.', 'customtaxorder'); ?></p>
 				<p><a href="https://supporters.eff.org/donate" target="_blank" title="<?php esc_attr_e('Please donate to the EFF.', 'customtaxorder'); ?>"><?php _e('Please donate to the EFF.', 'customtaxorder'); ?></a></p>
 
-				<h3 class="widget-top"><?php _e('Donate to the maintainer.', 'customtaxorder'); ?></h3>
+				<h2 class="widget-top"><?php _e('Donate to the maintainer.', 'customtaxorder'); ?></h2>
 				<p><?php _e('If you rather want to donate to the maintainer of the plugin, you can donate through PayPal.', 'customtaxorder'); ?></p>
 				<p><?php _e('Donate through', 'customtaxorder'); ?> <a href="https://www.paypal.com" target="_blank" title="<?php esc_attr_e('Donate to the maintainer.', 'customtaxorder'); ?>"><?php _e('PayPal', 'customtaxorder'); ?></a>
 					<?php _e('to', 'customtaxorder'); ?> marcel@timelord.nl.

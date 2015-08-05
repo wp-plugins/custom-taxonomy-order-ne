@@ -22,7 +22,7 @@ function customtaxorder() {
 
 	if ( $_GET['page'] == 'customtaxorder' ) {
 		?>
-		<h2>Custom Taxonomy Order NE</h2>
+		<h1>Custom Taxonomy Order NE</h1>
 		<div class="order-widget">
 			<p><?php _e('The ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.', 'customtaxorder'); ?></p>
 		<?php
@@ -40,7 +40,7 @@ function customtaxorder() {
 		}
 
 		if ( !empty( $taxonomies ) ) {
-			echo "<h3>" . __('Taxonomies', 'customtaxorder') . "</h3><ul>";
+			echo "<h2>" . __('Taxonomies', 'customtaxorder') . "</h2><ul>";
 			foreach ( $taxonomies as $taxonomy ) {
 				echo '<li class="lineitem"><a href="' . admin_url( 'admin.php?page=customtaxorder-' . $taxonomy->name ) . '">' . $taxonomy->label . '</a></li>';
 			}
@@ -99,7 +99,7 @@ function customtaxorder() {
 ?>
 <div class='wrap'>
 	<?php screen_icon('customtaxorder'); ?>
-	<h2><?php echo __('Order ', 'customtaxorder') . $tax_label; ?></h2>
+	<h1><?php echo __('Order ', 'customtaxorder') . $tax_label; ?></h1>
 	<form name="custom-order-form" method="post" action="">
 		<?php
 		$args = array(
@@ -114,7 +114,7 @@ function customtaxorder() {
 			?>
 			<div id="poststuff" class="metabox-holder">
 				<div class="widget order-widget">
-					<h3 class="widget-top"><?php _e( $tax_label) ?> | <small><?php _e('Order the taxonomies by dragging and dropping them into the desired order.', 'customtaxorder') ?></small></h3>
+					<h2 class="widget-top"><?php _e( $tax_label) ?> | <small><?php _e('Order the taxonomies by dragging and dropping them into the desired order.', 'customtaxorder') ?></small></h2>
 					<div class="misc-pub-section">
 						<ul id="custom-order-list">
 							<?php foreach ( $terms as $term ) : ?>
@@ -138,7 +138,7 @@ function customtaxorder() {
 				</div>
 				<?php $dropdown = customtaxorder_sub_query( $terms, $tax ); if( !empty($dropdown) ) { ?>
 				<div class="widget order-widget">
-					<h3 class="widget-top"><?php print(__('Sub-', 'customtaxorder').$tax_label); ?> | <small><?php _e('Choose a term from the drop down to order its sub-terms.', 'customtaxorder'); ?></small></h3>
+					<h2 class="widget-top"><?php print(__('Sub-', 'customtaxorder').$tax_label); ?> | <small><?php _e('Choose a term from the drop down to order its sub-terms.', 'customtaxorder'); ?></small></h2>
 					<div class="misc-pub-section misc-pub-section-last">
 						<select id="sub-posts" name="sub-posts">
 							<?php echo $dropdown; ?>
@@ -156,7 +156,7 @@ function customtaxorder() {
 		<?php settings_fields('customtaxorder_settings'); ?>
 		<div class="metabox-holder">
 			<div class="order-widget">
-				<h3 class="widget-top"><?php _e('Settings'); ?></h3>
+				<h2 class="widget-top"><?php _e('Settings'); ?></h2>
 				<table class="form-table">
 					<tr valign="top">
 						<th scope="row"><?php _e('Auto-Sort Queries of this Taxonomy', 'customtaxorder') ?></th>

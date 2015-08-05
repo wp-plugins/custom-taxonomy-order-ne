@@ -2,7 +2,7 @@
 Contributors: mpol
 Tags: ordering, sorting, terms, custom taxonomies, term order, categories, category order
 Requires at least: 3.0
-Tested up to: 4.2
+Tested up to: 4.3
 Stable tag: 2.6.4
 License: GPLv2 or later
 
@@ -102,6 +102,10 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.6.5 =
+* 2015-08-05
+* Use correct headings on admin pages.
 
 = 2.6.4 =
 * 2015-05-31
