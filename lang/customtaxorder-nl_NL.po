@@ -1,0 +1,205 @@
+# Custom Tax Order NE.
+# Copyright (C) 2013-2014 Marcel Pol
+# This file is distributed under the same license as the Custom Tax Order NE package.
+# Marcel Pol <marcel@timelord.nl>, 2013-2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-31 13:37+0200\n"
+"PO-Revision-Date: 2015-05-31 13:39+0100\n"
+"Last-Translator: Marcel Pol <marcel@timelord.nl>\n"
+"Language-Team: NL <nl@li.org>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+
+#: customtaxorder.php:40
+msgid "Custom Taxonomy Order NE settings"
+msgstr "Custom Taxonomy Order NE instellingen"
+
+#: customtaxorder.php:76
+msgid "Term Order"
+msgstr "Term Volgorde"
+
+#: customtaxorder.php:78 page-customtaxorder.php:102
+msgid "Order "
+msgstr "Sorteer "
+
+#: customtaxorder.php:80
+msgid "About"
+msgstr "Over"
+
+#: customtaxorder.php:160
+msgid "Order updated successfully."
+msgstr "Sorteer volgorde bijgewerkt."
+
+#: customtaxorder.php:163
+msgid "An error occured, order has not been saved."
+msgstr "Er ging iets mis, de sorteer volgorde is niet opgeslagen."
+
+#: customtaxorder.php:293
+msgid "About Custom Taxonomy Order NE"
+msgstr "Over Custom Taxonomy Order NE"
+
+#: customtaxorder.php:296
+msgid "About this plugin."
+msgstr "Over deze plugin."
+
+#: customtaxorder.php:297
+msgid "This plugin is being maintained by Marcel Pol from"
+msgstr "Deze plugin wordt onderhouden door Marcel Pol van"
+
+#: customtaxorder.php:301
+msgid "Review this plugin."
+msgstr "Review deze plugin."
+
+#: customtaxorder.php:302
+msgid "If this plugin has any value to you, then please leave a review at"
+msgstr "Als deze plugin enige waarde voor je heeft, laat dan een review achter op"
+
+#: customtaxorder.php:303
+msgid "The plugin page at wordpress.org."
+msgstr "de plugin pagina op wordpress.org."
+
+#: customtaxorder.php:304
+msgid "the plugin page at wordpress.org"
+msgstr "de plugin pagina op wordpress.org"
+
+#: customtaxorder.php:308
+msgid "Donate to the EFF."
+msgstr "Doneren aan de EFF."
+
+#: customtaxorder.php:309
+msgid ""
+"The Electronic Frontier Foundation is one of the few organisations that wants to "
+"keep the internet a free place."
+msgstr ""
+"De Electronic Frontier Foundation is één van de weinige organisaties die het "
+"internet vrij wil houden."
+
+#: customtaxorder.php:310
+msgid "Please donate to the EFF."
+msgstr "Doneer svp. aan de EFF."
+
+#: customtaxorder.php:312 customtaxorder.php:314
+msgid "Donate to the maintainer."
+msgstr "Doneren aan de ontwikkelaar."
+
+#: customtaxorder.php:313
+msgid ""
+"If you rather want to donate to the maintainer of the plugin, you can donate "
+"through PayPal."
+msgstr ""
+"Als je liever aan de ontwikkelaar van de plugin doneert, kun je via PayPal doneren."
+
+#: customtaxorder.php:314
+msgid "Donate through"
+msgstr "Doneer via"
+
+#: customtaxorder.php:314
+msgid "PayPal"
+msgstr "PayPal"
+
+#: customtaxorder.php:315
+msgid "to"
+msgstr "aan"
+
+#: customtaxorder.php:332 page-customtaxorder.php:159
+msgid "Settings"
+msgstr "Instellingen"
+
+#: page-customtaxorder.php:11
+msgid "Cheatin&#8217; uh?"
+msgstr "Valsspelen, he?"
+
+#: page-customtaxorder.php:27
+msgid ""
+"The ordering of categories and custom taxonomy terms through a simple drag-and-"
+"drop interface."
+msgstr ""
+"Het sorteren van categorieën en aangepaste taxonomietermen met behulp van een "
+"eenvoudige drag-en-drop interface."
+
+#: page-customtaxorder.php:43
+msgid "Taxonomies"
+msgstr "Taxonomieën"
+
+#: page-customtaxorder.php:71
+msgid "Order by ID (default)."
+msgstr "Sorteer volgens ID (standaard)."
+
+#: page-customtaxorder.php:72
+msgid "Custom Order as defined above."
+msgstr "Aangepaste Volgorde zoals boven aangegeven."
+
+#: page-customtaxorder.php:73
+msgid "Alphabetical Order."
+msgstr "Alfabetische Volgorde."
+
+#: page-customtaxorder.php:117
+msgid "Order the taxonomies by dragging and dropping them into the desired order."
+msgstr "Sorteer de taxonomieën door ze te verslepen naar de gewenste volgorde."
+
+#: page-customtaxorder.php:127
+msgid "Return to Parent"
+msgstr "Terug naar Parent"
+
+#: page-customtaxorder.php:131
+msgid "Update Order"
+msgstr "Volgorde Bijwerken"
+
+#: page-customtaxorder.php:132
+msgid "Sort Alphabetical"
+msgstr "Sorteer Alfabetisch"
+
+#: page-customtaxorder.php:141
+msgid "Sub-"
+msgstr "Sub-"
+
+#: page-customtaxorder.php:141
+msgid "Choose a term from the drop down to order its sub-terms."
+msgstr "Kies een term van de drop-down om de sub-terms te sorteren."
+
+#: page-customtaxorder.php:146
+msgid "Order Sub-terms"
+msgstr "Sorteer Sub-terms"
+
+#: page-customtaxorder.php:152
+msgid "No terms found"
+msgstr "Geen terms gevonden"
+
+#: page-customtaxorder.php:162
+msgid "Auto-Sort Queries of this Taxonomy"
+msgstr "Auto-Sorteer Queries van deze Taxonomie"
+
+#: page-customtaxorder.php:170
+msgid "Save Settings"
+msgstr "Sla Instellingen op"
+
+#~ msgid "Go to the plugin's Homepage"
+#~ msgstr "Ga naar de Homepage van de plugin"
+
+#~ msgid "Order Categories"
+#~ msgstr "Sorteer Categorieën"
+
+#~ msgid "Categories"
+#~ msgstr "Categorieën"
+
+#~ msgid "Order by ID (default)"
+#~ msgstr "Sorteer volgens ID (standaard)"
+
+#~ msgid ""
+#~ "Check this box if you want to enable Automatic Sorting of all instances from "
+#~ "this taxonomy."
+#~ msgstr ""
+#~ "Check deze box als je Automatisch Sorteren wilt gebruiken in deze taxonomie."
+
+#~ msgid "Auto-Sort Queries"
+#~ msgstr "Auto-Sorteer Queries"
+
+#~ msgid "Order the "
+#~ msgstr "Sorteer de "
