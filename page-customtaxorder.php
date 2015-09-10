@@ -8,7 +8,7 @@ function customtaxorder() {
 	global $customtaxorder_settings, $sitepress;
 
 	if ( function_exists('current_user_can') && !current_user_can('manage_categories') ) {
-		die(__('Cheatin&#8217; uh?'));
+		die(__( 'Cheatin&#8217; uh?', 'custom-taxonomy-order-ne' ));
 	}
 
 	customtaxorder_update_settings();
@@ -24,7 +24,7 @@ function customtaxorder() {
 		?>
 		<h1>Custom Taxonomy Order NE</h1>
 		<div class="order-widget">
-			<p><?php _e('The ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.', 'customtaxorder'); ?></p>
+			<p><?php _e('The ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.', 'custom-taxonomy-order-ne'); ?></p>
 		<?php
 		$args = array( 'public' => true );
 		$output = 'objects';
@@ -40,7 +40,7 @@ function customtaxorder() {
 		}
 
 		if ( !empty( $taxonomies ) ) {
-			echo "<h2>" . __('Taxonomies', 'customtaxorder') . "</h2><ul>";
+			echo "<h2>" . __('Taxonomies', 'custom-taxonomy-order-ne') . "</h2><ul>";
 			foreach ( $taxonomies as $taxonomy ) {
 				echo '<li class="lineitem"><a href="' . admin_url( 'admin.php?page=customtaxorder-' . $taxonomy->name ) . '">' . $taxonomy->label . '</a></li>';
 			}
@@ -68,9 +68,9 @@ function customtaxorder() {
 					$options[$taxonomy->name] = 0; // default if not set in options yet
 				}
 				if ( $_GET['page'] == $com_page ) {
-					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="0" ' . checked('0', $options[$taxonomy->name], false) . ' /> ' . __('Order by ID (default).', 'customtaxorder') . '</label><br />';
-					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="1" ' . checked('1', $options[$taxonomy->name], false) . ' /> ' . __('Custom Order as defined above.', 'customtaxorder') . '</label><br />';
-					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="2" ' . checked('2', $options[$taxonomy->name], false) . ' /> ' . __('Alphabetical Order.', 'customtaxorder') . '</label><br />';
+					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="0" ' . checked('0', $options[$taxonomy->name], false) . ' /> ' . __('Order by ID (default).', 'custom-taxonomy-order-ne') . '</label><br />';
+					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="1" ' . checked('1', $options[$taxonomy->name], false) . ' /> ' . __('Custom Order as defined above.', 'custom-taxonomy-order-ne') . '</label><br />';
+					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="2" ' . checked('2', $options[$taxonomy->name], false) . ' /> ' . __('Alphabetical Order.', 'custom-taxonomy-order-ne') . '</label><br />';
 					$tax_label = $taxonomy->label;
 					$tax = $taxonomy->name;
 				} else {
@@ -82,11 +82,16 @@ function customtaxorder() {
 			}
 		}
 	}
+	$parent_ID_order = 0;
 	if (isset($_POST['go-sub-posts'])) {
 		$parent_ID = $_POST['sub-posts'];
 	}
 	elseif (isset($_POST['hidden-parent-id'])) {
+		$parent_term = get_term($_POST['hidden-parent-id'], $tax);
 		$parent_ID = $_POST['hidden-parent-id'];
+		if ( is_object($parent_term) && isset($parent_term->term_order) ) {
+			$parent_ID_order = $parent_term->term_order;
+		}
 	}
 	if (isset($_POST['return-sub-posts'])) {
 		$parent_term = get_term($_POST['hidden-parent-id'], $tax);
@@ -99,7 +104,7 @@ function customtaxorder() {
 ?>
 <div class='wrap'>
 	<?php screen_icon('customtaxorder'); ?>
-	<h1><?php echo __('Order ', 'customtaxorder') . $tax_label; ?></h1>
+	<h1><?php echo __('Order ', 'custom-taxonomy-order-ne') . $tax_label; ?></h1>
 	<form name="custom-order-form" method="post" action="">
 		<?php
 		$args = array(
@@ -114,7 +119,7 @@ function customtaxorder() {
 			?>
 			<div id="poststuff" class="metabox-holder">
 				<div class="widget order-widget">
-					<h2 class="widget-top"><?php _e( $tax_label) ?> | <small><?php _e('Order the taxonomies by dragging and dropping them into the desired order.', 'customtaxorder') ?></small></h2>
+					<h2 class="widget-top"><?php _e( $tax_label) ?> | <small><?php _e('Order the taxonomies by dragging and dropping them into the desired order.', 'custom-taxonomy-order-ne') ?></small></h2>
 					<div class="misc-pub-section">
 						<ul id="custom-order-list">
 							<?php foreach ( $terms as $term ) : ?>
@@ -124,42 +129,43 @@ function customtaxorder() {
 					</div>
 					<div class="misc-pub-section misc-pub-section-last">
 						<?php if ($parent_ID != 0) { ?>
-							<input type="submit" class="button" style="float:left" id="return-sub-posts" name="return-sub-posts" value="<?php _e('Return to Parent', 'customtaxorder'); ?>" />
+							<input type="submit" class="button" style="float:left" id="return-sub-posts" name="return-sub-posts" value="<?php _e('Return to Parent', 'custom-taxonomy-order-ne'); ?>" />
 						<?php } ?>
 						<div id="publishing-action">
 							<img src="<?php echo esc_url( admin_url( 'images/wpspin_light.gif' ) ); ?>" id="custom-loading" style="display:none" alt="" />
-							<input type="submit" name="order-submit" id="order-submit" class="button-primary" value="<?php _e('Update Order', 'customtaxorder') ?>" />
-							<input type="submit" name="order-alpha" id="order-alpha" class="button-primary" value="<?php _e('Sort Alphabetical', 'customtaxorder') ?>" />
+							<input type="submit" name="order-submit" id="order-submit" class="button-primary" value="<?php _e('Update Order', 'custom-taxonomy-order-ne') ?>" />
+							<input type="submit" name="order-alpha" id="order-alpha" class="button" value="<?php _e('Sort Alphabetical', 'custom-taxonomy-order-ne') ?>" />
 						</div>
 						<div class="clear"></div>
 					</div>
 					<input type="hidden" id="hidden-custom-order" name="hidden-custom-order" />
 					<input type="hidden" id="hidden-parent-id" name="hidden-parent-id" value="<?php echo $parent_ID; ?>" />
+					<input type="hidden" id="hidden-parent-id-order" name="hidden-parent-id-order" value="<?php echo $parent_ID_order; ?>" />
 				</div>
 				<?php $dropdown = customtaxorder_sub_query( $terms, $tax ); if( !empty($dropdown) ) { ?>
 				<div class="widget order-widget">
-					<h2 class="widget-top"><?php print(__('Sub-', 'customtaxorder').$tax_label); ?> | <small><?php _e('Choose a term from the drop down to order its sub-terms.', 'customtaxorder'); ?></small></h2>
+					<h2 class="widget-top"><?php print(__('Sub-', 'custom-taxonomy-order-ne').$tax_label); ?> | <small><?php _e('Choose a term from the drop down to order its sub-terms.', 'custom-taxonomy-order-ne'); ?></small></h2>
 					<div class="misc-pub-section misc-pub-section-last">
 						<select id="sub-posts" name="sub-posts">
 							<?php echo $dropdown; ?>
 						</select>
-						<input type="submit" name="go-sub-posts" class="button" id="go-sub-posts" value="<?php _e('Order Sub-terms', 'customtaxorder') ?>" />
+						<input type="submit" name="go-sub-posts" class="button" id="go-sub-posts" value="<?php _e('Order Sub-terms', 'custom-taxonomy-order-ne') ?>" />
 					</div>
 				</div>
 				<?php } ?>
 			</div>
 		<?php } else { ?>
-			<p><?php _e('No terms found', 'customtaxorder'); ?></p>
+			<p><?php _e('No terms found', 'custom-taxonomy-order-ne'); ?></p>
 		<?php } ?>
 	</form>
 	<form method="post" action="options.php" class="clear">
 		<?php settings_fields('customtaxorder_settings'); ?>
 		<div class="metabox-holder">
 			<div class="order-widget">
-				<h2 class="widget-top"><?php _e('Settings'); ?></h2>
+				<h2 class="widget-top"><?php _e( 'Settings', 'custom-taxonomy-order-ne' ); ?></h2>
 				<table class="form-table">
 					<tr valign="top">
-						<th scope="row"><?php _e('Auto-Sort Queries of this Taxonomy', 'customtaxorder') ?></th>
+						<th scope="row"><?php _e('Auto-Sort Queries of this Taxonomy', 'custom-taxonomy-order-ne') ?></th>
 					</tr>
 					<tr valign="top">
 						<td><?php echo $settings; ?></td>
@@ -167,7 +173,7 @@ function customtaxorder() {
 				</table>
 				<input type="hidden" name="customtaxorder_settings[update]" value="Updated" />
 				<p class="submit">
-					<input type="submit" class="button-primary" value="<?php _e('Save Settings', 'customtaxorder') ?>" />
+					<input type="submit" class="button-primary" value="<?php _e('Save Settings', 'custom-taxonomy-order-ne') ?>" />
 				</p>
 			</div>
 		</div>

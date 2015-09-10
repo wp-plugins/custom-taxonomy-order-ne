@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-31 13:37+0200\n"
-"PO-Revision-Date: 2015-05-31 13:39+0100\n"
+"POT-Creation-Date: 2015-09-05 16:07+0200\n"
+"PO-Revision-Date: 2015-09-05 16:08+0200\n"
 "Last-Translator: Marcel Pol <marcel@timelord.nl>\n"
 "Language-Team: NL <nl@li.org>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8.3\n"
 
 #: customtaxorder.php:40
 msgid "Custom Taxonomy Order NE settings"
@@ -69,11 +69,11 @@ msgstr "de plugin pagina op wordpress.org."
 msgid "the plugin page at wordpress.org"
 msgstr "de plugin pagina op wordpress.org"
 
-#: customtaxorder.php:308
+#: customtaxorder.php:307
 msgid "Donate to the EFF."
 msgstr "Doneren aan de EFF."
 
-#: customtaxorder.php:309
+#: customtaxorder.php:308
 msgid ""
 "The Electronic Frontier Foundation is one of the few organisations that wants to "
 "keep the internet a free place."
@@ -81,34 +81,34 @@ msgstr ""
 "De Electronic Frontier Foundation is één van de weinige organisaties die het "
 "internet vrij wil houden."
 
-#: customtaxorder.php:310
+#: customtaxorder.php:309
 msgid "Please donate to the EFF."
 msgstr "Doneer svp. aan de EFF."
 
-#: customtaxorder.php:312 customtaxorder.php:314
+#: customtaxorder.php:311 customtaxorder.php:313
 msgid "Donate to the maintainer."
 msgstr "Doneren aan de ontwikkelaar."
 
-#: customtaxorder.php:313
+#: customtaxorder.php:312
 msgid ""
 "If you rather want to donate to the maintainer of the plugin, you can donate "
 "through PayPal."
 msgstr ""
 "Als je liever aan de ontwikkelaar van de plugin doneert, kun je via PayPal doneren."
 
-#: customtaxorder.php:314
+#: customtaxorder.php:313
 msgid "Donate through"
 msgstr "Doneer via"
 
-#: customtaxorder.php:314
+#: customtaxorder.php:313
 msgid "PayPal"
 msgstr "PayPal"
 
-#: customtaxorder.php:315
+#: customtaxorder.php:314
 msgid "to"
 msgstr "aan"
 
-#: customtaxorder.php:332 page-customtaxorder.php:159
+#: customtaxorder.php:331 page-customtaxorder.php:159
 msgid "Settings"
 msgstr "Instellingen"
 

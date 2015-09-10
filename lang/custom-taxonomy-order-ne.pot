@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-31 13:37+0200\n"
+"POT-Creation-Date: 2015-09-05 16:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,43 +69,43 @@ msgstr ""
 msgid "the plugin page at wordpress.org"
 msgstr ""
 
-#: customtaxorder.php:308
+#: customtaxorder.php:307
 msgid "Donate to the EFF."
 msgstr ""
 
-#: customtaxorder.php:309
+#: customtaxorder.php:308
 msgid ""
 "The Electronic Frontier Foundation is one of the few organisations that "
 "wants to keep the internet a free place."
 msgstr ""
 
-#: customtaxorder.php:310
+#: customtaxorder.php:309
 msgid "Please donate to the EFF."
 msgstr ""
 
-#: customtaxorder.php:312 customtaxorder.php:314
+#: customtaxorder.php:311 customtaxorder.php:313
 msgid "Donate to the maintainer."
 msgstr ""
 
-#: customtaxorder.php:313
+#: customtaxorder.php:312
 msgid ""
 "If you rather want to donate to the maintainer of the plugin, you can donate "
 "through PayPal."
 msgstr ""
 
-#: customtaxorder.php:314
+#: customtaxorder.php:313
 msgid "Donate through"
 msgstr ""
 
-#: customtaxorder.php:314
+#: customtaxorder.php:313
 msgid "PayPal"
 msgstr ""
 
-#: customtaxorder.php:315
+#: customtaxorder.php:314
 msgid "to"
 msgstr ""
 
-#: customtaxorder.php:332 page-customtaxorder.php:159
+#: customtaxorder.php:331 page-customtaxorder.php:159
 msgid "Settings"
 msgstr ""
 

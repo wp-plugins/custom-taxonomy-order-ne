@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: mpol
-Tags: ordering, sorting, terms, custom taxonomies, term order, categories, category order
-Requires at least: 3.0
+Tags: order, ordering, sorting, terms, term order, term ordering, terms order, terms ordering, categories, category order, category ordering, categories order, categories ordering, custom taxonomies, taxonomy order, taxonomy ordering, taxonomies order, taxonomies ordering
+Requires at least: 3.7
 Tested up to: 4.3
-Stable tag: 2.6.5
+Stable tag: 2.6.6
 License: GPLv2 or later
 
 
@@ -68,9 +68,19 @@ You can apply the sorting for the taxonomy by using:
 
 = I have a custom taxonomy that uses the Tag Cloud functionality, but it doesn't sort like it should. =
 
-Can you tell me what is the name for the taxonomy?
+If it is a much used plugin, can you tell me what is the name for the taxonomy?
 In the customtaxorder_wp_get_object_terms_order_filter it needs to be added, and the get_terms filter should not run
 on that taxonomy. The tag_cloud_sort filter should do that.
+
+If it is a custom taxonomy, you can also use a filter:
+
+	<?php
+	add_filter( 'customtaxorder_exclude_taxonomies', 'add_taxonomy_to_customtaxorder_exclude_taxonomies' );
+	function add_taxonomy_to_customtaxorder_exclude_taxonomies( $taxonomies ) {
+		$taxonomies[] = 'directory'; // name of your tag taxonomy.
+		return $taxonomies;
+	}
+	?>
 
 = I'm using the_tags function, but it doesn't sort as it should. =
 
@@ -93,7 +103,7 @@ You could add the following example to your functions.php and work from there.
 	add_action('customtaxorder_update_order', 'custom_action');
 	?>
 
-Email any other questions to marcel at zenoweb dot nl
+Email any other questions to marcel at zenoweb dot nl.
 
 == Screenshots ==
 
@@ -102,6 +112,19 @@ The menu completely left lists the different taxonomies.
 Left are the main taxonomies. Right (or below) are the sub-taxonomies.
 
 == Changelog ==
+
+= 2.6.7 =
+* 2015-
+* Only support WordPress 3.7+, since they really are supported.
+
+= 2.6.6 =
+* 2015-09-05
+* Add filter for (not) sorting a tagcloud (thanks sunriseweb).
+* For sub-term, start counting at term_order of parent-term, so sorting looks reasonable.
+* "Order Alphabetically" button is no button-primary.
+* Change textdomain to slug.
+* Make admin_notices dismissible.
+* Add version to admin CSS.
 
 = 2.6.5 =
 * 2015-08-05

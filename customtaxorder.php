@@ -3,11 +3,11 @@
 Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://products.zenoweb.nl/free-wordpress-plugins/custom-taxonomy-order-ne/
 Description: Allows for the ordering of categories and custom taxonomy terms through a simple drag-and-drop interface.
-Version: 2.6.5
+Version: 2.6.6
 Author: Marcel Pol
 Author URI: http://zenoweb.nl/
 License: GPLv2 or later
-Text Domain: customtaxorder
+Text Domain: custom-taxonomy-order-ne
 Domain Path: /lang/
 
 Copyright 2013-2015   Marcel Pol   (email: marcel@timelord.nl)
@@ -28,6 +28,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
 
+// Plugin Version
+define('CUSTOMTAXORDER_VER', '2.6.6');
+
+
 function customtaxorder_register_settings() {
 	register_setting('customtaxorder_settings', 'customtaxorder_settings', 'customtaxorder_settings_validate');
 }
@@ -37,7 +41,7 @@ add_action('admin_init', 'customtaxorder_register_settings');
 function customtaxorder_update_settings() {
 	global $customtaxorder_settings, $customtaxorder_defaults;
 	if ( isset($customtaxorder_settings['update']) ) {
-		echo '<div class="updated fade" id="message"><p>' . __('Custom Taxonomy Order NE settings', 'customtaxorder') . ' ' . $customtaxorder_settings['update'] . '</p></div>';
+		echo '<div class="updated fade notice is-dismissible" id="message"><p>' . __('Custom Taxonomy Order NE settings', 'custom-taxonomy-order-ne') . ' ' . $customtaxorder_settings['update'] . '</p></div>';
 		unset($customtaxorder_settings['update']);
 		update_option('customtaxorder_settings', $customtaxorder_settings);
 	}
@@ -73,12 +77,13 @@ function customtaxorder_menu() {
 		$taxonomies = array_merge($taxonomies, $taxonomies2);
 	}
 
-	add_menu_page(__('Term Order', 'customtaxorder'), __('Term Order', 'customtaxorder'), 'manage_categories', 'customtaxorder', 'customtaxorder', 'dashicons-images-alt', 122.35);
+	add_menu_page(__('Term Order', 'customtaxorder'), __('Term Order', 'custom-taxonomy-order-ne'), 'manage_categories', 'customtaxorder', 'customtaxorder', 'dashicons-images-alt', 122.35);
 	foreach ($taxonomies as $taxonomy ) {
-		add_submenu_page('customtaxorder', __('Order ', 'customtaxorder') . $taxonomy->label, __('Order ', 'customtaxorder') . $taxonomy->label, 'manage_categories', 'customtaxorder-'.$taxonomy->name, 'customtaxorder');
+		add_submenu_page('customtaxorder', __('Order ', 'custom-taxonomy-order-ne') . $taxonomy->label, __('Order ', 'custom-taxonomy-order-ne') . $taxonomy->label, 'manage_categories', 'customtaxorder-'.$taxonomy->name, 'customtaxorder');
 	}
-	add_submenu_page('customtaxorder', __('About', 'customtaxorder'), __('About', 'customtaxorder'), 'manage_categories', 'customtaxorder-about', 'customtaxorder_about');
+	add_submenu_page('customtaxorder', __('About', 'custom-taxonomy-order-ne'), __('About', 'custom-taxonomy-order-ne'), 'manage_categories', 'customtaxorder-about', 'customtaxorder_about');
 }
+add_action('admin_menu', 'customtaxorder_menu');
 
 
 function customtaxorder_css() {
@@ -87,10 +92,11 @@ function customtaxorder_css() {
 		$pos_args = 'customtaxorder';
 		$pos = strpos($pos_page,$pos_args);
 		if ( $pos === false ) {} else {
-			wp_enqueue_style('customtaxorder', plugins_url('css/customtaxorder.css', __FILE__), 'screen');
+			wp_enqueue_style('customtaxorder', plugins_url( 'css/customtaxorder.css', __FILE__), false, CUSTOMTAXORDER_VER, 'screen' );
 		}
 	}
 }
+add_action('admin_print_styles', 'customtaxorder_css');
 
 
 function customtaxorder_js_libs() {
@@ -105,8 +111,6 @@ function customtaxorder_js_libs() {
 		}
 	}
 }
-add_action('admin_menu', 'customtaxorder_menu');
-add_action('admin_print_styles', 'customtaxorder_css');
 add_action('admin_print_scripts', 'customtaxorder_js_libs');
 
 
@@ -135,32 +139,37 @@ function customtax_cmp( $a, $b ) {
 function customtaxorder_update_order() {
 	if (isset($_POST['hidden-custom-order']) && $_POST['hidden-custom-order'] != "") {
 		global $wpdb;
+		$parent_ID_order = 0;
+		if ( isset($_POST['hidden-parent-id-order']) && $_POST['hidden-parent-id-order'] > 0 ) {
+			$parent_ID_order = (int) $_POST['hidden-parent-id-order'] + 1;
+		}
 		$new_order = $_POST['hidden-custom-order'];
 		$IDs = explode(",", $new_order);
 		$ids = Array();
 		$result = count($IDs);
 		for($i = 0; $i < $result; $i++) {
 			$id = (int) str_replace("id_", "", $IDs[$i]);
+			$j = $i + $parent_ID_order;
 			$wpdb->query( $wpdb->prepare(
 				"
 					UPDATE $wpdb->terms SET term_order = '%d' WHERE term_id ='%d'
 				",
-				$i,
+				$j,
 				$id
 			) );
 			$wpdb->query( $wpdb->prepare(
 				"
 					UPDATE $wpdb->term_relationships SET term_order = '%d' WHERE term_taxonomy_id ='%d'
 				",
-				$i,
+				$j,
 				$id
 			) );
 			$ids[] = $id;
 		}
-		echo '<div id="message" class="updated fade"><p>'. __('Order updated successfully.', 'customtaxorder').'</p></div>';
+		echo '<div id="message" class="updated fade notice is-dismissible"><p>'. __('Order updated successfully.', 'custom-taxonomy-order-ne').'</p></div>';
 		do_action('customtaxorder_update_order', $ids);
 	} else {
-		echo '<div id="message" class="error fade"><p>'. __('An error occured, order has not been saved.', 'customtaxorder').'</p></div>';
+		echo '<div id="message" class="error fade notice is-dismissible"><p>'. __('An error occured, order has not been saved.', 'custom-taxonomy-order-ne').'</p></div>';
 	}
 }
 
@@ -244,7 +253,8 @@ function customtaxorder_wp_get_object_terms_order_filter( $terms ) {
 	}
 	if ( $options[$taxonomy] == 1 && !isset($_GET['orderby']) ) {
 		if (current_filter() == 'get_terms' ) {
-			if ( $taxonomy == 'post_tag' || $taxonomy == 'product_tag' ) {
+			$customtaxorder_exclude_taxonomies = array('post_tag', 'product_tag');
+			if ( in_array($taxonomy, apply_filters( 'customtaxorder_exclude_taxonomies', $customtaxorder_exclude_taxonomies )) ) {
 				// no filtering so the test in wp_generate_tag_cloud() works out right for us
 				// filtering will happen in the tag_cloud_sort filter sometime later
 				// post_tag = default tags
@@ -290,28 +300,28 @@ add_filter('get_the_categories', 'customtaxorder_order_categories', 10, 3);
 function customtaxorder_about() {
 	?>
 	<div class='wrap'>
-		<h1><?php _e('About Custom Taxonomy Order NE', 'customtaxorder'); ?></h1>
+		<h1><?php _e('About Custom Taxonomy Order NE', 'custom-taxonomy-order-ne'); ?></h1>
 		<div id="poststuff" class="metabox-holder">
 			<div class="widget">
-				<h2 class="widget-top"><?php _e('About this plugin.', 'customtaxorder'); ?></h2>
-				<p><?php _e('This plugin is being maintained by Marcel Pol from', 'customtaxorder'); ?>
+				<h2 class="widget-top"><?php _e('About this plugin.', 'custom-taxonomy-order-ne'); ?></h2>
+				<p><?php _e('This plugin is being maintained by Marcel Pol from', 'custom-taxonomy-order-ne'); ?>
 					<a href="http://zenoweb.nl" target="_blank" title="ZenoWeb">ZenoWeb</a>.
 				</p>
 
-				<h2 class="widget-top"><?php _e('Review this plugin.', 'customtaxorder'); ?></h2>
-				<p><?php _e('If this plugin has any value to you, then please leave a review at', 'customtaxorder'); ?>
-					<a href="https://wordpress.org/support/view/plugin-reviews/custom-taxonomy-order-ne" target="_blank" title="<?php esc_attr_e('The plugin page at wordpress.org.', 'customtaxorder'); ?>">
-						<?php _e('the plugin page at wordpress.org', 'customtaxorder'); ?></a>.
+				<h2 class="widget-top"><?php _e('Review this plugin.', 'custom-taxonomy-order-ne'); ?></h2>
+				<p><?php _e('If this plugin has any value to you, then please leave a review at', 'custom-taxonomy-order-ne'); ?>
+					<a href="https://wordpress.org/support/view/plugin-reviews/custom-taxonomy-order-ne" target="_blank" title="<?php esc_attr_e('The plugin page at wordpress.org.', 'custom-taxonomy-order-ne'); ?>">
+						<?php _e('the plugin page at wordpress.org', 'custom-taxonomy-order-ne'); ?></a>.
 				</p>
 
-				<h2 class="widget-top"><?php _e('Donate to the EFF.', 'customtaxorder'); ?></h2>
-				<p><?php _e('The Electronic Frontier Foundation is one of the few organisations that wants to keep the internet a free place.', 'customtaxorder'); ?></p>
-				<p><a href="https://supporters.eff.org/donate" target="_blank" title="<?php esc_attr_e('Please donate to the EFF.', 'customtaxorder'); ?>"><?php _e('Please donate to the EFF.', 'customtaxorder'); ?></a></p>
+				<h2 class="widget-top"><?php _e('Donate to the EFF.', 'custom-taxonomy-order-ne'); ?></h2>
+				<p><?php _e('The Electronic Frontier Foundation is one of the few organisations that wants to keep the internet a free place.', 'custom-taxonomy-order-ne'); ?></p>
+				<p><a href="https://supporters.eff.org/donate" target="_blank" title="<?php esc_attr_e('Please donate to the EFF.', 'custom-taxonomy-order-ne'); ?>"><?php _e('Please donate to the EFF.', 'custom-taxonomy-order-ne'); ?></a></p>
 
-				<h2 class="widget-top"><?php _e('Donate to the maintainer.', 'customtaxorder'); ?></h2>
-				<p><?php _e('If you rather want to donate to the maintainer of the plugin, you can donate through PayPal.', 'customtaxorder'); ?></p>
-				<p><?php _e('Donate through', 'customtaxorder'); ?> <a href="https://www.paypal.com" target="_blank" title="<?php esc_attr_e('Donate to the maintainer.', 'customtaxorder'); ?>"><?php _e('PayPal', 'customtaxorder'); ?></a>
-					<?php _e('to', 'customtaxorder'); ?> marcel@timelord.nl.
+				<h2 class="widget-top"><?php _e('Donate to the maintainer.', 'custom-taxonomy-order-ne'); ?></h2>
+				<p><?php _e('If you rather want to donate to the maintainer of the plugin, you can donate through PayPal.', 'custom-taxonomy-order-ne'); ?></p>
+				<p><?php _e('Donate through', 'custom-taxonomy-order-ne'); ?> <a href="https://www.paypal.com" target="_blank" title="<?php esc_attr_e('Donate to the maintainer.', 'custom-taxonomy-order-ne'); ?>"><?php _e('PayPal', 'custom-taxonomy-order-ne'); ?></a>
+					<?php _e('to', 'custom-taxonomy-order-ne'); ?> marcel@timelord.nl.
 				</p>
 			</div>
 		</div>
@@ -328,7 +338,7 @@ function customtaxorder_about() {
 
 function customtaxorder_links( $links, $file ) {
 	if ( $file == plugin_basename( dirname(__FILE__).'/customtaxorder.php' ) ) {
-		$links[] = '<a href="' . admin_url( 'admin.php?page=customtaxorder' ) . '">'.__( 'Settings' ).'</a>';
+		$links[] = '<a href="' . admin_url( 'admin.php?page=customtaxorder' ) . '">' . __( 'Settings', 'custom-taxonomy-order-ne' ) . '</a>';
 	}
 	return $links;
 }
@@ -346,7 +356,7 @@ add_filter( 'plugin_action_links', 'customtaxorder_links', 10, 2 );
 function customtaxorder_initialize() {
 	global $customtaxorder_settings, $customtaxorder_defaults;
 
-	load_plugin_textdomain('customtaxorder', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
+	load_plugin_textdomain('custom-taxonomy-order-ne', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/');
 
 	$customtaxorder_defaults = array('category' => 0);
 	$args = array( 'public' => true, '_builtin' => false );
