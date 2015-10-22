@@ -108,8 +108,8 @@ Email any other questions to marcel at zenoweb dot nl.
 == Screenshots ==
 
 1. Screenshot of the menu page for Custom Taxonomy Order.
-The menu completely left lists the different taxonomies.
-Left are the main taxonomies. Right (or below) are the sub-taxonomies.
+The WordPress menu completely left lists the different taxonomies.
+The left metabox lists the toplevel terms. Right (or below) are the sub-terms.
 
 == Changelog ==
 
