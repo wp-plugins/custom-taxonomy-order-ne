@@ -133,7 +133,7 @@ function customtaxorder_sort_taxonomies( $taxonomies = array() ) {
 
 	$taxonomies_ordered = array();
 
-	if ( ! empty($order) && is_array($order) ) {
+	if ( ! empty($order) && is_array($order) && ! empty($taxonomies) && is_array($taxonomies) ) {
 		foreach ( $order as $tax ) {
 			foreach ( $taxonomies as $tax_name => $tax_obj ) {
 				if ( is_object( $tax_obj ) && $tax === $tax_name ) {

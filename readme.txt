@@ -11,17 +11,18 @@ Allows for the ordering of categories and custom taxonomy terms through a simple
 
 == Description ==
 
-Custom Taxonomy Order New Edition is a plugin for WordPress which allows for the ordering of taxonomies.
+Custom Taxonomy Order New Edition is a plugin for WordPress which allows for the ordering of taxonomy terms.
 
 It supports the following features:
 
-* Order (custom) taxonomies through a simple drag-and-drop interface.
+* Order (custom) terms through a simple drag-and-drop interface.
 * No custom coding needed. It uses standard WordPress filters.
 * It uses the available WordPress scripts and styles.
 * The plugin is lightweight, without any unnecessary scripts to load into the admin.
 * It falls in line gracefully with the look and feel of the WordPress interface.
 * It uses it's own menu in the backend.
 * Translated or translatable.
+* Custom functions to order the taxonomies themselves.
 * There is no Pro version, everything works in the Free version.
 
 It is a continuation (or fork) of Custom Taxonomy Order, which has been discontinued.
@@ -90,6 +91,22 @@ And yes, that is strange :).
 = What capabilities are needed? =
 
 For sorting the terms you need the manage_categories capability.
+
+= Can I sort the taxonomies themselves? =
+
+There is an admin page to sort them, and save them in the database.
+
+You can use a function to sort taxonomies themselves like this:
+
+	<?php
+	$taxonomy_objects = get_object_taxonomies( 'post', 'objects' );
+	$taxonomy_objects = customtaxorder_sort_taxonomies($taxonomy_objects);
+	foreach (  $taxonomy_objects as $tax ) {
+		echo $tax->name . "<br />";
+	}
+	?>
+
+The function requires a parameter with an array of taxonomy objects.
 
 = Is there an API? =
 
