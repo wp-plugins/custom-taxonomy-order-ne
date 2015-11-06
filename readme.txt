@@ -113,8 +113,9 @@ The left metabox lists the toplevel terms. Right (or below) are the sub-terms.
 
 == Changelog ==
 
-= 2.6.7 =
-* 2015-
+= 2.7.0 =
+* 2015-11-
+* Offer options to support the taxonomies themselves.
 * Only support WordPress 3.7+, since they really are supported.
 
 = 2.6.6 =
