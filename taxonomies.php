@@ -127,7 +127,7 @@ function customtaxorder_update_taxonomies() {
  *
  */
 function customtaxorder_sort_taxonomies( $taxonomies = array() ) {
-	$order = get_option( 'customtaxorder_taxonomies', array() );
+	$order = get_option( 'customtaxorder_taxonomies', '' );
 	$order = explode( ",", $order );
 	$taxonomies_ordered = array();
 
@@ -163,7 +163,7 @@ function customtaxorder_sort_taxonomies( $taxonomies = array() ) {
  *
  */
 function customtaxorder_sort_taxonomies_array( $taxonomies = array() ) {
-	$order = get_option( 'customtaxorder_taxonomies', array() );
+	$order = get_option( 'customtaxorder_taxonomies', '' );
 	$order = explode( ",", $order );
 	$taxonomies_woo = array();
 

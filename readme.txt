@@ -131,7 +131,8 @@ The left metabox lists the toplevel terms. Right (or below) are the sub-terms.
 == Changelog ==
 
 = 2.7.1 =
-* 2015-
+* 2015-11-07
+* Explode() expects parameter to be a string, not an array.
 * Better dashicon.
 * Drop pot, nl_NL, they are maintained at GlotPress.
 
