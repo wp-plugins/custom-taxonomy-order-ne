@@ -19,7 +19,11 @@ function customtaxorder() {
 	// Remove filter for WPML
 	remove_filter( 'terms_clauses', array( $sitepress, 'terms_clauses' ), 10, 4 );
 	remove_filter( 'get_terms', array( $sitepress, 'get_terms_filter' ) );
+	?>
+	<div class='wrap customtaxorder'>
+		<div id="icon-customtaxorder"></div>
 
+	<?php
 	if ( $_GET['page'] == 'customtaxorder' ) {
 		?>
 		<h1>Custom Taxonomy Order NE</h1>
@@ -41,11 +45,13 @@ function customtaxorder() {
 
 		if ( !empty( $taxonomies ) ) {
 			echo "<h2>" . __('Taxonomies', 'custom-taxonomy-order-ne') . "</h2><ul>";
+			$taxonomies = customtaxorder_sort_taxonomies( $taxonomies );
+			echo '<li class="lineitem"><a href="' . admin_url( 'admin.php?page=customtaxorder-taxonomies' ) . '">' . __('Taxonomies', 'custom-taxonomy-order-ne') . '</a></li>';
 			foreach ( $taxonomies as $taxonomy ) {
 				echo '<li class="lineitem"><a href="' . admin_url( 'admin.php?page=customtaxorder-' . $taxonomy->name ) . '">' . $taxonomy->label . '</a></li>';
 			}
 		}
-		echo "</ul></div>";
+		echo "</ul></div></div><!-- #wrap -->";
 		return;
 	} else {
 		$args = array( 'public' => true );
@@ -102,8 +108,7 @@ function customtaxorder() {
 		customtaxorder_update_order();
 	}
 ?>
-<div class='wrap'>
-	<?php screen_icon('customtaxorder'); ?>
+
 	<h1><?php echo __('Order ', 'custom-taxonomy-order-ne') . $tax_label; ?></h1>
 	<form name="custom-order-form" method="post" action="">
 		<?php

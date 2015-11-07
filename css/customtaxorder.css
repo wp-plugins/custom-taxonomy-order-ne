@@ -3,6 +3,20 @@ Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://timelord.nl/
 */
 
+/* Menu Icon */
+#icon-customtaxorder {
+	background-image: url('../images/icon-128x128.png');
+	background-repeat: no-repeat;
+	margin: 0 10px 10px 0;
+	float: left;
+	width: 45px;
+	height: 45px;
+	background-size: contain;
+}
+.customtaxorder h1 {
+	line-height: 45px;
+}
+
 .customtaxorder .order-widget {
 	width: 512px;
 }

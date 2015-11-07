@@ -131,9 +131,12 @@ The left metabox lists the toplevel terms. Right (or below) are the sub-terms.
 == Changelog ==
 
 = 2.7.0 =
-* 2015-11-
-* Offer options to support the taxonomies themselves.
+* 2015-11-07
+* Offer page and functions to support the taxonomies themselves.
+* Support WooCommerce attributes.
 * Only support WordPress 3.7+, since they really are supported.
+* More specific CSS.
+* Add icon on admin pages.
 
 = 2.6.6 =
 * 2015-09-05

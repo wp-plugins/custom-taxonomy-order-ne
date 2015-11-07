@@ -8,14 +8,13 @@ function custom_taxonomy_order() {
 	}
 
 	?>
-	<div class='wrap'>
-		<?php screen_icon('customtaxorder'); ?>
+	<div class='wrap customtaxorder'>
+		<div id="icon-customtaxorder"></div>
 		<h1><?php _e('Order Taxonomies', 'custom-taxonomy-order-ne'); ?></h1>
-		<p><?php _e('The ordering of taxonomies themselves.', 'custom-taxonomy-order-ne'); ?></p>
 
 		<form name="custom-order-form" method="post" action="">
 			<?php
-			$args = array( 'public' => true );
+			$args = array();
 			$output = 'objects';
 			$taxonomies = get_taxonomies( $args, $output );
 
@@ -130,9 +129,9 @@ function customtaxorder_update_taxonomies() {
 function customtaxorder_sort_taxonomies( $taxonomies = array() ) {
 	$order = get_option( 'customtaxorder_taxonomies', array() );
 	$order = explode( ",", $order );
-
 	$taxonomies_ordered = array();
 
+	// Main sorted taxonomies.
 	if ( ! empty($order) && is_array($order) && ! empty($taxonomies) && is_array($taxonomies) ) {
 		foreach ( $order as $tax ) {
 			foreach ( $taxonomies as $tax_name => $tax_obj ) {
@@ -144,7 +143,7 @@ function customtaxorder_sort_taxonomies( $taxonomies = array() ) {
 		}
 	}
 
-	// The leftovers
+	// Unsorted taxonomies, the leftovers.
 	foreach ( $taxonomies as $tax_name => $tax_obj ) {
 		$taxonomies_ordered[ $tax_name ] = $tax_obj;
 	}
@@ -152,3 +151,39 @@ function customtaxorder_sort_taxonomies( $taxonomies = array() ) {
 	return $taxonomies_ordered;
 }
 
+
+/*
+ * Same as customtaxorder_sort_taxonomies, but for WooCommerce.
+ *
+ * Parameter: $taxonomies, array with a list of taxonomy arrays.
+ *
+ * Returns: array with list of taxonomies, ordered correctly.
+ *
+ * Since: 2.7.0
+ *
+ */
+function customtaxorder_sort_taxonomies_array( $taxonomies = array() ) {
+	$order = get_option( 'customtaxorder_taxonomies', array() );
+	$order = explode( ",", $order );
+	$taxonomies_woo = array();
+
+	// Main sorted taxonomies.
+	if ( ! empty($order) && is_array($order) && ! empty($taxonomies) && is_array($taxonomies) ) {
+		foreach ( $order as $tax ) {
+			foreach ( $taxonomies as $taxonomy ) {
+				if ( is_array( $taxonomy ) && $tax === $taxonomy['name'] ) {
+					$taxonomies_woo[] = $taxonomy;
+					unset( $taxonomies[$taxonomy['name']] );
+				}
+			}
+		}
+	}
+
+	// Unsorted taxonomies, the leftovers.
+	foreach ( $taxonomies as $taxonomy ) {
+		$taxonomies_woo[] = $taxonomy;
+	}
+
+	return $taxonomies_woo;
+}
+add_filter( 'woocommerce_get_product_attributes', 'customtaxorder_sort_taxonomies_array' );
