@@ -2,8 +2,8 @@
 Contributors: mpol
 Tags: order, ordering, sorting, terms, term order, term ordering, terms order, terms ordering, categories, category order, category ordering, categories order, categories ordering, custom taxonomies, taxonomy order, taxonomy ordering, taxonomies order, taxonomies ordering
 Requires at least: 3.7
-Tested up to: 4.3
-Stable tag: 2.6.6
+Tested up to: 4.4
+Stable tag: 2.7.0
 License: GPLv2 or later
 
 
