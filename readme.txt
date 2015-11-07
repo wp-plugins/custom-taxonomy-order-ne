@@ -137,6 +137,7 @@ The left metabox lists the toplevel terms. Right (or below) are the sub-terms.
 * Only support WordPress 3.7+, since they really are supported.
 * More specific CSS.
 * Add icon on admin pages.
+* Update pot, nl_NL.
 
 = 2.6.6 =
 * 2015-09-05
