@@ -46,9 +46,11 @@ function customtaxorder() {
 		if ( !empty( $taxonomies ) ) {
 			echo "<h2>" . __('Taxonomies', 'custom-taxonomy-order-ne') . "</h2><ul>";
 			$taxonomies = customtaxorder_sort_taxonomies( $taxonomies );
-			echo '<li class="lineitem"><a href="' . admin_url( 'admin.php?page=customtaxorder-taxonomies' ) . '">' . __('Taxonomies', 'custom-taxonomy-order-ne') . '</a></li>';
+			echo '<li class="lineitem"><a href="' . admin_url( 'admin.php?page=customtaxorder-taxonomies' ) . '">' . __('Taxonomies', 'custom-taxonomy-order-ne') . '</a></li>
+				';
 			foreach ( $taxonomies as $taxonomy ) {
-				echo '<li class="lineitem"><a href="' . admin_url( 'admin.php?page=customtaxorder-' . $taxonomy->name ) . '">' . $taxonomy->label . '</a></li>';
+				echo '<li class="lineitem"><a href="' . admin_url( 'admin.php?page=customtaxorder-' . $taxonomy->name ) . '">' . $taxonomy->label . '</a></li>
+				';
 			}
 		}
 		echo "</ul></div></div><!-- #wrap -->";
@@ -74,9 +76,12 @@ function customtaxorder() {
 					$options[$taxonomy->name] = 0; // default if not set in options yet
 				}
 				if ( $_GET['page'] == $com_page ) {
-					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="0" ' . checked('0', $options[$taxonomy->name], false) . ' /> ' . __('Order by ID (default).', 'custom-taxonomy-order-ne') . '</label><br />';
-					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="1" ' . checked('1', $options[$taxonomy->name], false) . ' /> ' . __('Custom Order as defined above.', 'custom-taxonomy-order-ne') . '</label><br />';
-					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="2" ' . checked('2', $options[$taxonomy->name], false) . ' /> ' . __('Alphabetical Order.', 'custom-taxonomy-order-ne') . '</label><br />';
+					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="0" ' . checked('0', $options[$taxonomy->name], false) . ' /> ' . __('Order by ID (default).', 'custom-taxonomy-order-ne') . '</label><br />
+						';
+					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="1" ' . checked('1', $options[$taxonomy->name], false) . ' /> ' . __('Custom Order as defined above.', 'custom-taxonomy-order-ne') . '</label><br />
+						';
+					$settings .= '<label><input type="radio" name="customtaxorder_settings[' . $taxonomy->name . ']" value="2" ' . checked('2', $options[$taxonomy->name], false) . ' /> ' . __('Alphabetical Order.', 'custom-taxonomy-order-ne') . '</label><br />
+						';
 					$tax_label = $taxonomy->label;
 					$tax = $taxonomy->name;
 				} else {

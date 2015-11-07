@@ -31,13 +31,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 // Plugin Version
 define('CUSTOMTAXORDER_VER', '2.7.0');
 
-/*
- * Todo:
- *
- * - Sort also taxonomies for the different taxonomy functions.
- *
- */
-
 
 function customtaxorder_register_settings() {
 	register_setting('customtaxorder_settings', 'customtaxorder_settings', 'customtaxorder_settings_validate');
