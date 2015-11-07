@@ -3,26 +3,29 @@ Plugin Name: Custom Taxonomy Order NE
 Plugin URI: http://timelord.nl/
 */
 
-.order-widget {
+.customtaxorder .order-widget {
 	width: 512px;
 }
-#poststuff .order-widget {
+.customtaxorder #poststuff .order-widget {
 	float: left;
 	margin: 0 20px 20px 0;
 }
-#sub-posts,
-#go-sub-posts {
+.customtaxorder #sub-posts,
+.customtaxorder #go-sub-posts {
 	margin-top: 13px;
 }
 
-.order-widget th {
+.customtaxorder .order-widget th {
 	padding-left: 12px;
 }
+.customtaxorder .metabox-holder h2.widget-top {
+	padding: 8px 12px;
+}
 
-ul#custom-order-list {
+.customtaxorder ul#custom-order-list {
 	list-style: none;
 }
-li.lineitem {
+.customtaxorder li.lineitem {
 	border: 1px solid #dfdfdf;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -33,10 +36,10 @@ li.lineitem {
 	height: 24px;
 	line-height: 24px;
 }
-li.outer {
+.customtaxorder li.outer {
 	background-color: #f5f5f5;
 }
-.sortable-placeholder{
+.customtaxorder .sortable-placeholder{
 	border: 1px dashed #dfdfdf;
 	margin: 3px auto;
 	height: 30px;
