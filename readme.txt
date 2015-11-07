@@ -132,6 +132,7 @@ The left metabox lists the toplevel terms. Right (or below) are the sub-terms.
 
 = 2.7.1 =
 * 2015-
+* Better dashicon.
 * Drop pot, nl_NL, they are maintained at GlotPress.
 
 = 2.7.0 =

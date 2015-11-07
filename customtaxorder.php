@@ -79,7 +79,7 @@ function customtaxorder_menu() {
 
 	$taxonomies = customtaxorder_sort_taxonomies( $taxonomies );
 
-	add_menu_page(__('Term Order', 'customtaxorder'), __('Term Order', 'custom-taxonomy-order-ne'), 'manage_categories', 'customtaxorder', 'customtaxorder', 'dashicons-images-alt', 122.35);
+	add_menu_page(__('Term Order', 'customtaxorder'), __('Term Order', 'custom-taxonomy-order-ne'), 'manage_categories', 'customtaxorder', 'customtaxorder', 'dashicons-list-view', 122.35);
 	add_submenu_page('customtaxorder', __('Order Taxonomies', 'custom-taxonomy-order-ne'), __('Order Taxonomies', 'custom-taxonomy-order-ne'), 'manage_categories', 'customtaxorder-taxonomies', 'custom_taxonomy_order');
 
 	foreach ($taxonomies as $taxonomy ) {
