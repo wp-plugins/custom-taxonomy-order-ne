@@ -128,6 +128,7 @@ Email any other questions to marcel at zenoweb dot nl.
 The WordPress menu completely left lists the different taxonomies.
 The left metabox lists the toplevel terms. Right (or below) are the sub-terms.
 
+
 == Changelog ==
 
 = 2.7.1 =
